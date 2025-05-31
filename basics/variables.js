@@ -10,3 +10,5 @@ let isActive = true;
 // Modify Age
 userAge += 3;
 
+console.log('Name: ${userName}, Age: ${userAge},Active: ${isActive}');
+// Expected Output: "Name: Ali, Age: 28, Active: true"
