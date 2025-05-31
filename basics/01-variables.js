@@ -9,3 +9,10 @@
  * 3. Work with constants
  * 4. Try type conversion
  */
+
+// ==========================================
+// 1. Variable Declaration Basics
+// ==========================================
+let userName = "Mohammad";
+const birthYear = 1995;
+var isDeveloper = true;
