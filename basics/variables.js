@@ -6,3 +6,7 @@
 let userName = 'Ali';
 let userAge = 25;
 let isActive = true;
+
+// Modify Age
+userAge += 3;
+
