@@ -10,3 +10,13 @@
  * 4. Higher-Order Functions
  * 5. Callback Functions
  */
+
+// ==========================================
+// 1. Basic Function Declaration
+// ==========================================
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log("=== Basic Function ===");
+console.log(greet("Alex")); // Hello, Alex!
