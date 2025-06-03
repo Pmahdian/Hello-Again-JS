@@ -20,3 +20,14 @@ function greet(name) {
 
 console.log("=== Basic Function ===");
 console.log(greet("Alex")); // Hello, Alex!
+
+
+// ==========================================
+// 2. Function Expression
+// ==========================================
+const calculateArea = function(width, height) {
+  return width * height;
+};
+
+console.log("\n=== Function Expression ===");
+console.log("Area:", calculateArea(5, 7)); // 35
