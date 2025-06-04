@@ -54,3 +54,14 @@ const createBio = (name, age) => {
 };
 
 console.log("Bio:", createBio("Sarah", 28));
+
+// ==========================================
+// 4. Default Parameters
+// ==========================================
+function createUser(name, role = "user") {
+  return { name, role };
+}
+
+console.log("\n=== Default Parameters ===");
+console.log(createUser("Ali")); // { name: 'Ali', role: 'user' }
+console.log(createUser("Mina", "admin")); // { name: 'Mina', role: 'admin' }
