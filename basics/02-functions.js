@@ -54,3 +54,28 @@ const createBio = (name, age) => {
 };
 
 console.log("Bio:", createBio("Sarah", 28));
+
+// ==========================================
+// 4. Default Parameters
+// ==========================================
+function createUser(name, role = "user") {
+  return { name, role };
+}
+
+console.log("\n=== Default Parameters ===");
+console.log(createUser("Ali")); // { name: 'Ali', role: 'user' }
+console.log(createUser("Mina", "admin")); // { name: 'Mina', role: 'admin' }
+
+
+// ==========================================
+// 5. Higher-Order Functions
+// ==========================================
+function multiplier(factor) {
+  return function(number) {
+    return number * factor;
+  };
+}
+
+const triple = multiplier(3);
+console.log("\n=== Higher-Order Function ===");
+console.log("Triple of 5:", triple(5)); // 15
