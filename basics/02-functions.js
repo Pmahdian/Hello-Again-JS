@@ -79,3 +79,18 @@ function multiplier(factor) {
 const triple = multiplier(3);
 console.log("\n=== Higher-Order Function ===");
 console.log("Triple of 5:", triple(5)); // 15
+
+
+
+// ==========================================
+// 6. Callback Functions
+// ==========================================
+function processNumbers(numbers, callback) {
+  return numbers.map(callback);
+}
+
+const numbers = [1, 2, 3];
+const squaredNumbers = processNumbers(numbers, x => x * x);
+
+console.log("\n=== Callback Function ===");
+console.log("Squared Numbers:", squaredNumbers); // [1, 4, 9]
