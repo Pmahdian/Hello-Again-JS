@@ -94,3 +94,20 @@ const squaredNumbers = processNumbers(numbers, x => x * x);
 
 console.log("\n=== Callback Function ===");
 console.log("Squared Numbers:", squaredNumbers); // [1, 4, 9]
+
+
+// ==========================================
+// 🎯 PRACTICE EXERCISES
+// ==========================================
+/*
+  1. Create an arrow function that calculates BMI (weight / height²)
+  2. Write a function that accepts a callback and executes it after delay
+  3. Create a counter function using closures
+  4. Write a function with default parameter for greeting language
+*/
+
+// ==========================================
+// 🧩 Solution for Exercise 1 (BMI Calculator)
+// ==========================================
+const calculateBMI = (weight, height) => (weight / (height ** 2)).toFixed(2);
+console.log("\nBMI:", calculateBMI(70, 1.75)); // 22.86
