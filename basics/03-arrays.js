@@ -64,3 +64,28 @@ console.log('Even numbers:', evens);
 // reduce - accumulate values
 const sum = numbers.reduce((total, num) => total + num, 0);
 console.log('Sum of numbers:', sum);
+
+
+
+// ==========================================
+// 4. Array Search Methods
+// ==========================================
+console.log('\n=== Part 4: Array Searching ===');
+
+const users = [
+  { id: 1, name: 'Ali', age: 25 },
+  { id: 2, name: 'Maryam', age: 30 },
+  { id: 3, name: 'Reza', age: 22 }
+];
+
+// find - get first matching element
+const youngUser = users.find(u => u.age < 30);
+console.log('User under 30:', youngUser);
+
+// some - check if any elements match
+const hasTeen = users.some(u => u.age < 20);
+console.log('Has teenager?', hasTeen);
+
+// every - check if all elements match
+const allAdults = users.every(u => u.age >= 18);
+console.log('All adults?', allAdults);
