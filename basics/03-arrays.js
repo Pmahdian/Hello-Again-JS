@@ -89,3 +89,23 @@ console.log('Has teenager?', hasTeen);
 // every - check if all elements match
 const allAdults = users.every(u => u.age >= 18);
 console.log('All adults?', allAdults);
+
+
+
+// ==========================================
+// 5. Other Useful Array Methods
+// ==========================================
+console.log('\n=== Part 5: Other Array Methods ===');
+
+// slice - get subarray (non-destructive)
+const someFruits = fruits.slice(1, 3);
+console.log('Fruits subarray:', someFruits);
+
+// splice - modify array (destructive)
+fruits.splice(1, 1, 'Pineapple', 'Tangerine');
+console.log('After splice:', fruits);
+
+// concat - combine arrays
+const moreFruits = ['Fig', 'Raspberry'];
+const allFruits = fruits.concat(moreFruits);
+console.log('Combined fruits:', allFruits);
