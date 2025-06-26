@@ -109,3 +109,9 @@ console.log('After splice:', fruits);
 const moreFruits = ['Fig', 'Raspberry'];
 const allFruits = fruits.concat(moreFruits);
 console.log('Combined fruits:', allFruits);
+
+
+// ==========================================
+// 🎯 Practice Exercises
+// ==========================================
+console.log('\n=== Practice Exercises ===');
