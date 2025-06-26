@@ -115,3 +115,12 @@ console.log('Combined fruits:', allFruits);
 // 🎯 Practice Exercises
 // ==========================================
 console.log('\n=== Practice Exercises ===');
+
+/**
+ * 1. Write a function to calculate average of numbers
+ */
+function calculateAverage(nums) {
+  const sum = nums.reduce((total, num) => total + num, 0);
+  return sum / nums.length;
+}
+console.log('Average:', calculateAverage([10, 20, 30]));
