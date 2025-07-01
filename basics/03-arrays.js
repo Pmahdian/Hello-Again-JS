@@ -124,3 +124,12 @@ function calculateAverage(nums) {
   return sum / nums.length;
 }
 console.log('Average:', calculateAverage([10, 20, 30]));
+
+/**
+ * 2. Find the longest string in an array
+ */
+function findLongestString(strings) {
+  return strings.reduce((longest, current) => 
+    current.length > longest.length ? current : longest, '');
+}
+console.log('Longest string:', findLongestString(['one', 'two', 'three']));
