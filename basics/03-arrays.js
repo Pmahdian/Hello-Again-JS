@@ -141,3 +141,15 @@ function findCommonElements(arr1, arr2) {
   return arr1.filter(item => arr2.includes(item));
 }
 console.log('Common elements:', findCommonElements([1, 2, 3], [2, 3, 4]));
+
+
+// ==========================================
+// 🧠 Learning Summary
+// ==========================================
+/*
+Key Array Concepts:
+- Arrays are ordered collections
+- Zero-based indexing
+- Methods can be destructive (modify original) or non-destructive
+- Callback functions are used extensively with array methods
+*/
