@@ -115,3 +115,12 @@ console.log('Combined fruits:', allFruits);
 // 🎯 Practice Exercises
 // ==========================================
 console.log('\n=== Practice Exercises ===');
+
+/**
+ * 2. Find the longest string in an array
+ */
+function findLongestString(strings) {
+  return strings.reduce((longest, current) => 
+    current.length > longest.length ? current : longest, '');
+}
+console.log('Longest string:', findLongestString(['one', 'two', 'three']));
