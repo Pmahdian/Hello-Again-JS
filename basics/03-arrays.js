@@ -117,10 +117,10 @@ console.log('Combined fruits:', allFruits);
 console.log('\n=== Practice Exercises ===');
 
 /**
- * 2. Find the longest string in an array
+ * 1. Write a function to calculate average of numbers
  */
-function findLongestString(strings) {
-  return strings.reduce((longest, current) => 
-    current.length > longest.length ? current : longest, '');
+function calculateAverage(nums) {
+  const sum = nums.reduce((total, num) => total + num, 0);
+  return sum / nums.length;
 }
-console.log('Longest string:', findLongestString(['one', 'two', 'three']));
+console.log('Average:', calculateAverage([10, 20, 30]));
