@@ -11,3 +11,9 @@
  * 5. Object Spread Operator
  * 6. Prototypes and Classes
  */
+
+
+// ==========================================
+// 1. Object Creation and Properties
+// ==========================================
+console.log('=== Part 1: Object Basics ===');
