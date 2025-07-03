@@ -17,3 +17,15 @@
 // 1. Object Creation and Properties
 // ==========================================
 console.log('=== Part 1: Object Basics ===');
+
+// Object literal syntax
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 30,
+  isEmployed: true,
+  address: {
+    street: '123 Main St',
+    city: 'New York'
+  }
+};
