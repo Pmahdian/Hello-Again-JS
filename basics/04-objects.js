@@ -34,3 +34,9 @@ const person = {
 console.log(person.firstName); // Dot notation
 console.log(person['lastName']); // Bracket notation
 console.log(person.address.city); // Nested access
+
+// Adding new properties
+person.email = 'john@example.com';
+person['phone'] = '555-1234';
+
+console.log('Modified person:', person);
