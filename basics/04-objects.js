@@ -40,3 +40,34 @@ person.email = 'john@example.com';
 person['phone'] = '555-1234';
 
 console.log('Modified person:', person);
+
+
+// ==========================================
+// 2. Object Methods and 'this'
+// ==========================================
+console.log('\n=== Part 2: Object Methods ===');
+
+const account = {
+  owner: 'Alex',
+  balance: 1000,
+  
+  // Method to deposit money
+  deposit(amount) {
+    this.balance += amount;
+    console.log(`Deposited $${amount}. New balance: $${this.balance}`);
+  },
+  
+  // Method to withdraw money
+  withdraw(amount) {
+    if (amount > this.balance) {
+      console.log('Insufficient funds');
+      return;
+    }
+    this.balance -= amount;
+    console.log(`Withdrew $${amount}. New balance: $${this.balance}`);
+  }
+};
+
+account.deposit(500);
+account.withdraw(200);
+account.withdraw(2000); // Should show insufficient funds
