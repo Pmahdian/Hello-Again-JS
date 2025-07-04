@@ -83,3 +83,14 @@ const car = {
   year: 2020,
   color: 'blue'
 };
+
+// for...in loop
+console.log('Car properties:');
+for (const key in car) {
+  console.log(`${key}: ${car[key]}`);
+}
+
+// Object.keys(), Object.values(), Object.entries()
+console.log('Keys:', Object.keys(car));
+console.log('Values:', Object.values(car));
+console.log('Entries:', Object.entries(car));
