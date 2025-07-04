@@ -71,3 +71,15 @@ const account = {
 account.deposit(500);
 account.withdraw(200);
 account.withdraw(2000); // Should show insufficient funds
+
+// ==========================================
+// 3. Iterating Over Objects
+// ==========================================
+console.log('\n=== Part 3: Object Iteration ===');
+
+const car = {
+  make: 'Toyota',
+  model: 'Camry',
+  year: 2020,
+  color: 'blue'
+};
