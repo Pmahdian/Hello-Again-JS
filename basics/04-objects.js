@@ -29,3 +29,8 @@ const person = {
     city: 'New York'
   }
 };
+
+// Accessing properties
+console.log(person.firstName); // Dot notation
+console.log(person['lastName']); // Bracket notation
+console.log(person.address.city); // Nested access
