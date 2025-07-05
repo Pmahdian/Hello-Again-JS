@@ -159,3 +159,18 @@ Product.prototype.display = function() {
 
 const product1 = new Product('Laptop', 999);
 product1.display();
+
+// ES6 Class syntax
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+  
+  getInfo() {
+    return `${this.title} by ${this.author}`;
+  }
+}
+
+const book1 = new Book('1984', 'George Orwell');
+console.log(book1.getInfo());
