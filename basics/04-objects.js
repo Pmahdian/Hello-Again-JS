@@ -187,3 +187,24 @@ function mergeObjects(objA, objB) {
   return { ...objA, ...objB };
 }
 console.log('Merged:', mergeObjects({ x: 1 }, { y: 2 }));
+
+/**
+ * 2. Create a shopping cart object with methods
+ */
+const cart = {
+  items: [],
+  addItem(item) {
+    this.items.push(item);
+  },
+  removeItem(id) {
+    this.items = this.items.filter(item => item.id !== id);
+  },
+  getTotal() {
+    return this.items.reduce((sum, item) => sum + item.price, 0);
+  }
+};
+
+cart.addItem({ id: 1, name: 'Shirt', price: 25 });
+cart.addItem({ id: 2, name: 'Pants', price: 40 });
+console.log('Cart total:', cart.getTotal());
+
