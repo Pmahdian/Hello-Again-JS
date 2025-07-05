@@ -152,3 +152,10 @@ function Product(name, price) {
   this.price = price;
 }
 
+// Adding method to prototype
+Product.prototype.display = function() {
+  console.log(`${this.name} costs $${this.price}`);
+};
+
+const product1 = new Product('Laptop', 999);
+product1.display();
