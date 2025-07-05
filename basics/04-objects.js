@@ -134,3 +134,9 @@ const obj2 = { b: 3, c: 4 };
 // Merging objects
 const merged = { ...obj1, ...obj2 };
 console.log('Merged objects:', merged); // { a: 1, b: 3, c: 4 }
+
+// Creating copies
+const personCopy = { ...person };
+personCopy.firstName = 'Mike';
+console.log('Original:', person.firstName);
+console.log('Copy:', personCopy.firstName);
