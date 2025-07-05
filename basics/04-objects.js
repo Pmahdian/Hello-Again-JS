@@ -140,3 +140,9 @@ const personCopy = { ...person };
 personCopy.firstName = 'Mike';
 console.log('Original:', person.firstName);
 console.log('Copy:', personCopy.firstName);
+
+// ==========================================
+// 6. Prototypes and Classes
+// ==========================================
+console.log('\n=== Part 6: Prototypes and Classes ===');
+
