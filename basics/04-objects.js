@@ -208,3 +208,27 @@ cart.addItem({ id: 1, name: 'Shirt', price: 25 });
 cart.addItem({ id: 2, name: 'Pants', price: 40 });
 console.log('Cart total:', cart.getTotal());
 
+/**
+ * 3. Create a class for a Bank Account
+ */
+class BankAccount {
+  constructor(owner, balance = 0) {
+    this.owner = owner;
+    this.balance = balance;
+  }
+  
+  deposit(amount) {
+    this.balance += amount;
+  }
+  
+  withdraw(amount) {
+    if (amount > this.balance) throw new Error('Insufficient funds');
+    this.balance -= amount;
+  }
+}
+
+const myAccount = new BankAccount('Alice', 100);
+myAccount.deposit(50);
+console.log('Account balance:', myAccount.balance);
+
+
