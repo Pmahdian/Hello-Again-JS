@@ -179,3 +179,11 @@ console.log(book1.getInfo());
 // 🎯 Practice Exercises
 // ==========================================
 console.log('\n=== Practice Exercises ===');
+
+/**
+ * 1. Create a function that merges two objects
+ */
+function mergeObjects(objA, objB) {
+  return { ...objA, ...objB };
+}
+console.log('Merged:', mergeObjects({ x: 1 }, { y: 2 }));
