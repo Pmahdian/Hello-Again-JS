@@ -146,3 +146,9 @@ console.log('Copy:', personCopy.firstName);
 // ==========================================
 console.log('\n=== Part 6: Prototypes and Classes ===');
 
+// Constructor function
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
