@@ -174,3 +174,8 @@ class Book {
 
 const book1 = new Book('1984', 'George Orwell');
 console.log(book1.getInfo());
+
+// ==========================================
+// 🎯 Practice Exercises
+// ==========================================
+console.log('\n=== Practice Exercises ===');
