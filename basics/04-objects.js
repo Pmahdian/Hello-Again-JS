@@ -121,3 +121,12 @@ console.log('Has scholarship?', scholarship);
 // Nested destructuring
 const { subjects: [firstSubject] } = student;
 console.log('First subject:', firstSubject);
+
+
+// ==========================================
+// 5. Object Spread Operator
+// ==========================================
+console.log('\n=== Part 5: Spread Operator ===');
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
