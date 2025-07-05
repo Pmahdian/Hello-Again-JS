@@ -105,3 +105,7 @@ const student = {
   grade: 'A',
   subjects: ['Math', 'Physics']
 };
+
+// Basic destructuring
+const { name, grade } = student;
+console.log(`${name} has grade ${grade}`);
