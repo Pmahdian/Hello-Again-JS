@@ -94,3 +94,14 @@ for (const key in car) {
 console.log('Keys:', Object.keys(car));
 console.log('Values:', Object.values(car));
 console.log('Entries:', Object.entries(car));
+
+// ==========================================
+// 4. Object Destructuring
+// ==========================================
+console.log('\n=== Part 4: Object Destructuring ===');
+
+const student = {
+  name: 'Sarah',
+  grade: 'A',
+  subjects: ['Math', 'Physics']
+};
