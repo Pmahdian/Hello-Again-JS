@@ -118,4 +118,3 @@ console.log('Student name:', studentName);
 const { scholarship = false } = student;
 console.log('Has scholarship?', scholarship);
 
-// Nested destructuring
