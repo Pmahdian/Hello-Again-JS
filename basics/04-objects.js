@@ -109,3 +109,7 @@ const student = {
 // Basic destructuring
 const { name, grade } = student;
 console.log(`${name} has grade ${grade}`);
+
+// Renaming variables
+const { name: studentName } = student;
+console.log('Student name:', studentName);
