@@ -170,3 +170,10 @@ console.log(user.profile?.age);            // undefined
 console.log(user.profile?.address?.city);  // "New York"
 console.log(user.settings?.theme);         // undefined
 
+
+// ==========================================
+// 🎯 Practice Exercises
+// ==========================================
+console.log('\n=== Practice Exercises ===');
+
+/**
