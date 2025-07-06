@@ -48,3 +48,14 @@ console.log(gradeCalculator(85)); // "B"
 
 
 
+// ==========================================
+// 2. Ternary Operator
+// ==========================================
+console.log('\n=== Part 2: Ternary Operator ===');
+
+function checkTemperature(temp) {
+  return temp > 30 ? 'Hot' : 'Moderate';
+}
+
+console.log(checkTemperature(35)); // "Hot"
+console.log(checkTemperature(25)); // "Moderate"
