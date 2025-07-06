@@ -139,4 +139,16 @@ function isNotAdult(age) {
 console.log(isNotAdult(20)); // false
 console.log(isNotAdult(15)); // true
 
+// ==========================================
+// 5. Nullish Coalescing (??)
+// ==========================================
+console.log('\n=== Part 5: Nullish Coalescing ===');
+
+function getUserName(name) {
+  return name ?? 'Anonymous';
+}
+
+console.log(getUserName(null));      // "Anonymous"
+console.log(getUserName('Alice'));   // "Alice"
+
 
