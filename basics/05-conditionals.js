@@ -129,6 +129,8 @@ function isEligibleForDiscount(age, isStudent) {
 
 console.log(isEligibleForDiscount(10, false)); // true
 console.log(isEligibleForDiscount(20, true));  // true
+
+
 // NOT (!) operator
 function isNotAdult(age) {
   return !(age >= 18);
