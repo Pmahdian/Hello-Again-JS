@@ -107,3 +107,8 @@ function getDayName(dayNumber) {
 
 console.log(getDayName(3)); // "Wednesday"
 console.log(getDayName(8)); // "Invalid day"
+
+// ==========================================
+// 4. Logical Operators
+// ==========================================
+console.log('\n=== Part 4: Logical Operators ===');
