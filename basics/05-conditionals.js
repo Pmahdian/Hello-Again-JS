@@ -59,3 +59,13 @@ function checkTemperature(temp) {
 
 console.log(checkTemperature(35)); // "Hot"
 console.log(checkTemperature(25)); // "Moderate"
+
+
+// Nested ternary
+function getFee(isMember) {
+  return isMember ? '$2.00' : '$10.00';
+}
+
+console.log(getFee(true));  // "$2.00"
+console.log(getFee(false)); // "$10.00"
+
