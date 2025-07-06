@@ -112,3 +112,10 @@ console.log(getDayName(8)); // "Invalid day"
 // 4. Logical Operators
 // ==========================================
 console.log('\n=== Part 4: Logical Operators ===');
+// AND (&&) operator
+function canDrive(age, hasLicense) {
+  return age >= 16 && hasLicense;
+}
+
+console.log(canDrive(17, true));  // true
+console.log(canDrive(15, true));  // false
