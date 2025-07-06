@@ -176,4 +176,3 @@ console.log(user.settings?.theme);         // undefined
 // ==========================================
 console.log('\n=== Practice Exercises ===');
 
-/**
