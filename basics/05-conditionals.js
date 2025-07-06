@@ -121,3 +121,12 @@ function canDrive(age, hasLicense) {
 
 console.log(canDrive(17, true));  // true
 console.log(canDrive(15, true));  // false
+
+// OR (||) operator
+function isEligibleForDiscount(age, isStudent) {
+  return age < 12 || isStudent;
+}
+
+console.log(isEligibleForDiscount(10, false)); // true
+console.log(isEligibleForDiscount(20, true));  // true
+
