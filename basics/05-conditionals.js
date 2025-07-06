@@ -45,3 +45,6 @@ function gradeCalculator(score) {
 }
 
 console.log(gradeCalculator(85)); // "B"
+
+
+
