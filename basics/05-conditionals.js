@@ -151,4 +151,22 @@ function getUserName(name) {
 console.log(getUserName(null));      // "Anonymous"
 console.log(getUserName('Alice'));   // "Alice"
 
+// ==========================================
+// 6. Optional Chaining (?.)
+// ==========================================
+console.log('\n=== Part 6: Optional Chaining ===');
+
+const user = {
+  profile: {
+    name: 'John',
+    address: {
+      city: 'New York'
+    }
+  }
+};
+
+console.log(user.profile?.name);           // "John"
+console.log(user.profile?.age);            // undefined
+console.log(user.profile?.address?.city);  // "New York"
+console.log(user.settings?.theme);         // undefined
 
