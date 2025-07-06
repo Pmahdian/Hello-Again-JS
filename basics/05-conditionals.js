@@ -28,3 +28,20 @@ function checkAge(age) {
 
 console.log(checkAge(25)); // "You are an adult"
 console.log(checkAge(15)); // "You are a minor"
+
+
+
+// Else-if ladder
+function gradeCalculator(score) {
+  if (score >= 90) {
+    return 'A';
+  } else if (score >= 80) {
+    return 'B';
+  } else if (score >= 70) {
+    return 'C';
+  } else {
+    return 'F';
+  }
+}
+
+console.log(gradeCalculator(85)); // "B"
