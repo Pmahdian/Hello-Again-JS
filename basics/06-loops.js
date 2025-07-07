@@ -23,3 +23,9 @@ console.log('=== Part 1: for Loops ===');
 for (let i = 1; i <= 5; i++) {
   console.log(`Count: ${i}`);
 }
+
+// Iterate through an array
+const fruits = ['apple', 'banana', 'orange'];
+for (let i = 0; i < fruits.length; i++) {
+  console.log(`Fruit at index ${i}: ${fruits[i]}`);
+}
