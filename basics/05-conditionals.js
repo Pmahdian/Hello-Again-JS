@@ -176,3 +176,19 @@ console.log(user.settings?.theme);         // undefined
 // ==========================================
 console.log('\n=== Practice Exercises ===');
 
+/**
+ * 1. Create a function that returns 'positive', 'negative' or 'zero'
+ *    based on a number input
+ */
+function checkNumber(num) {
+  if (num > 0) {
+    return 'positive';
+  } else if (num < 0) {
+    return 'negative';
+  } else {
+    return 'zero';
+  }
+}
+console.log(checkNumber(5));   // "positive"
+console.log(checkNumber(-3));  // "negative"
+console.log(checkNumber(0));   // "zero"
