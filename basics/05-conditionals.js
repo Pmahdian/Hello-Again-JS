@@ -192,3 +192,11 @@ function checkNumber(num) {
 console.log(checkNumber(5));   // "positive"
 console.log(checkNumber(-3));  // "negative"
 console.log(checkNumber(0));   // "zero"
+
+/**
+ * 2. Rewrite the checkNumber function using ternary operator
+ */
+function checkNumberTernary(num) {
+  return num > 0 ? 'positive' : num < 0 ? 'negative' : 'zero';
+}
+console.log(checkNumberTernary(5));   // "positive"
