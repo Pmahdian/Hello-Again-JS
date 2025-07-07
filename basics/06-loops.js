@@ -41,3 +41,11 @@ while (count > 0) {
   console.log(`Countdown: ${count}`);
   count--;
 }
+
+// Password guessing simulation
+const password = 'secret';
+let userInput = '';
+while (userInput !== password) {
+  userInput = prompt('Enter the password:');
+}
+console.log('Access granted!');
