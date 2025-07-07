@@ -29,3 +29,8 @@ const fruits = ['apple', 'banana', 'orange'];
 for (let i = 0; i < fruits.length; i++) {
   console.log(`Fruit at index ${i}: ${fruits[i]}`);
 }
+
+// ==========================================
+// 2. while Loops
+// ==========================================
+console.log('\n=== Part 2: while Loops ===');
