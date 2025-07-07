@@ -212,3 +212,15 @@ function isLeapYear(year) {
 }
 console.log(isLeapYear(2020)); // true
 console.log(isLeapYear(2021)); // false
+
+// ==========================================
+// 🧠 Learning Summary
+// ==========================================
+/*
+Key Conditional Concepts:
+- if/else for basic branching logic
+- Ternary for concise conditional expressions
+- Switch for multiple fixed cases
+- Logical operators (&&, ||, !) combine conditions
+- Modern operators (??, ?.) handle null/undefined safely
+*/
