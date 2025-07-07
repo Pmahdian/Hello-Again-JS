@@ -49,3 +49,9 @@ while (userInput !== password) {
   userInput = prompt('Enter the password:');
 }
 console.log('Access granted!');
+
+// ==========================================
+// 3. do-while Loops
+// ==========================================
+console.log('\n=== Part 3: do-while Loops ===');
+
