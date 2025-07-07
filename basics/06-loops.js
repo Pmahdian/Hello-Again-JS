@@ -34,3 +34,10 @@ for (let i = 0; i < fruits.length; i++) {
 // 2. while Loops
 // ==========================================
 console.log('\n=== Part 2: while Loops ===');
+
+// Countdown from 5
+let count = 5;
+while (count > 0) {
+  console.log(`Countdown: ${count}`);
+  count--;
+}
