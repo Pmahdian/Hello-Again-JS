@@ -12,3 +12,10 @@
  * 6. Loop control (break, continue)
  * 7. Array iteration methods
  */
+
+
+// ==========================================
+// 1. Basic for Loop
+// ==========================================
+console.log('=== Part 1: for Loops ===');
+
