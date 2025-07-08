@@ -194,3 +194,17 @@ function sumMatrix(matrix) {
 const sampleMatrix = [[1, 2], [3, 4], [5, 6]];
 console.log('Matrix sum:', sumMatrix(sampleMatrix)); // 21
 
+
+// ==========================================
+// 🧠 Learning Summary
+// ==========================================
+/*
+Key Loop Concepts:
+- for: When you know iteration count
+- while: When condition is more important
+- do-while: Runs at least once
+- for...of: For iterables (arrays, strings)
+- for...in: For object properties
+- break/continue: Control flow in loops
+- Array methods: Cleaner alternatives (forEach, map, etc.)
+*/
