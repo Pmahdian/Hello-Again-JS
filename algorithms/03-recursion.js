@@ -103,3 +103,12 @@ inOrderTraversal(tree); // 1, 2, 3, 4, 6
 // 🎯 Practice Exercises
 // ==========================================
 console.log('\n=== Practice Exercises ===');
+
+/**
+ * 1. Power Calculation (x^y)
+ */
+function power(x, y) {
+  if (y === 0) return 1;
+  return x * power(x, y - 1);
+}
+console.log('2^5:', power(2, 5)); // 32
