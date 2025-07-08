@@ -61,3 +61,15 @@ do {
   num = prompt('Enter a number between 1-10:');
 } while (num < 1 || num > 10);
 console.log(`You entered: ${num}`);
+
+// ==========================================
+// 4. for...of Loops (Arrays)
+// ==========================================
+console.log('\n=== Part 4: for...of Loops ===');
+
+// Iterate array elements
+const colors = ['red', 'green', 'blue'];
+for (const color of colors) {
+  console.log(`Color: ${color}`);
+}
+
