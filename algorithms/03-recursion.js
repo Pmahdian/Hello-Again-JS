@@ -48,3 +48,19 @@ console.log('Fibonacci(10):', fibonacci(10)); // 55
 // 3. Divide and Conquer
 // ==========================================
 console.log('\n=== Divide & Conquer ===');
+
+/**
+ * Binary Search (Recursive)
+ * Time: O(log n), Space: O(log n)
+ */
+function recursiveBinarySearch(arr, target, left = 0, right = arr.length - 1) {
+  if (left > right) return -1;
+  
+  const mid = Math.floor((left + right) / 2);
+  if (arr[mid] === target) return mid;
+  
+  return arr[mid] > target 
+    ? recursiveBinarySearch(arr, target, left, mid - 1)
+    : recursiveBinarySearch(arr, target, mid + 1, right);
+}
+console.log('Binary Search:', recursiveBinarySearch([1,3,5,7,9], 5)); // 2
