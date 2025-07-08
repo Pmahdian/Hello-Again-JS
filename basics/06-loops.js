@@ -116,3 +116,24 @@ for (let i = 0; i < 5; i++) {
   }
   console.log(`Number: ${i}`);
 }
+
+
+// ==========================================
+// 7. Array Iteration Methods
+// ==========================================
+console.log('\n=== Part 7: Array Methods ===');
+
+const numbers = [1, 2, 3, 4, 5];
+
+// forEach
+numbers.forEach((num, index) => {
+  console.log(`Element at ${index}: ${num}`);
+});
+
+// map
+const squared = numbers.map(num => num * num);
+console.log('Squared numbers:', squared);
+
+// filter
+const evens = numbers.filter(num => num % 2 === 0);
+console.log('Even numbers:', evens);
