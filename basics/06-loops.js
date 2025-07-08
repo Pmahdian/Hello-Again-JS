@@ -108,3 +108,11 @@ for (let i = 1; i <= 10; i++) {
   }
   console.log(i);
 }
+
+// continue example
+for (let i = 0; i < 5; i++) {
+  if (i === 2) {
+    continue; // Skip iteration 2
+  }
+  console.log(`Number: ${i}`);
+}
