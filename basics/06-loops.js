@@ -178,3 +178,19 @@ function findPrimes(n) {
   return primes;
 }
 console.log('Primes up to 20:', findPrimes(20));
+
+/**
+ * 3. Sum all numbers in a matrix (2D array)
+ */
+function sumMatrix(matrix) {
+  let total = 0;
+  for (const row of matrix) {
+    for (const num of row) {
+      total += num;
+    }
+  }
+  return total;
+}
+const sampleMatrix = [[1, 2], [3, 4], [5, 6]];
+console.log('Matrix sum:', sumMatrix(sampleMatrix)); // 21
+
