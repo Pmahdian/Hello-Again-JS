@@ -89,3 +89,12 @@ function inOrderTraversal(node) {
   inOrderTraversal(node.right);
 }
 
+// Sample Tree
+const tree = new TreeNode(4);
+tree.left = new TreeNode(2);
+tree.right = new TreeNode(6);
+tree.left.left = new TreeNode(1);
+tree.left.right = new TreeNode(3);
+
+console.log('In-order Traversal:');
+inOrderTraversal(tree); // 1, 2, 3, 4, 6
