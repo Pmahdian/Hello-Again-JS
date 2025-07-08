@@ -98,3 +98,8 @@ tree.left.right = new TreeNode(3);
 
 console.log('In-order Traversal:');
 inOrderTraversal(tree); // 1, 2, 3, 4, 6
+
+// ==========================================
+// 🎯 Practice Exercises
+// ==========================================
+console.log('\n=== Practice Exercises ===');
