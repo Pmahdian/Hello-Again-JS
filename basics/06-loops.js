@@ -78,3 +78,19 @@ const word = 'hello';
 for (const char of word) {
   console.log(`Character: ${char}`);
 }
+
+// ==========================================
+// 5. for...in Loops (Objects)
+// ==========================================
+console.log('\n=== Part 5: for...in Loops ===');
+
+// Iterate object properties
+const person = {
+  name: 'John',
+  age: 30,
+  occupation: 'developer'
+};
+
+for (const key in person) {
+  console.log(`${key}: ${person[key]}`);
+}
