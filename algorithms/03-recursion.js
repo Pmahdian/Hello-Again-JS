@@ -30,3 +30,16 @@ console.log('Factorial(5):', factorial(5)); // 120
 // 2. Recursion with Memoization
 // ==========================================
 console.log('\n=== Memoization ===');
+
+/**
+ * Fibonacci Sequence
+ * Time: O(n) with memoization, O(2^n) without
+ */
+function fibonacci(n, memo = {}) {
+  if (n in memo) return memo[n];
+  if (n <= 2) return 1;
+  
+  memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
+  return memo[n];
+}
+console.log('Fibonacci(10):', fibonacci(10)); // 55
