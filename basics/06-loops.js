@@ -94,3 +94,8 @@ const person = {
 for (const key in person) {
   console.log(`${key}: ${person[key]}`);
 }
+
+// ==========================================
+// 6. Loop Control (break & continue)
+// ==========================================
+console.log('\n=== Part 6: Loop Control ===');
