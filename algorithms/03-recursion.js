@@ -25,3 +25,8 @@ function factorial(n) {
   return n * factorial(n - 1);
 }
 console.log('Factorial(5):', factorial(5)); // 120
+
+// ==========================================
+// 2. Recursion with Memoization
+// ==========================================
+console.log('\n=== Memoization ===');
