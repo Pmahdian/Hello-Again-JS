@@ -15,3 +15,13 @@
 // 1. Basic Recursion
 // ==========================================
 console.log('=== Basic Recursion ===');
+
+/**
+ * Factorial Calculation
+ * Time: O(n), Space: O(n)
+ */
+function factorial(n) {
+  if (n <= 1) return 1;
+  return n * factorial(n - 1);
+}
+console.log('Factorial(5):', factorial(5)); // 120
