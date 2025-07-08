@@ -137,3 +137,8 @@ console.log('Squared numbers:', squared);
 // filter
 const evens = numbers.filter(num => num % 2 === 0);
 console.log('Even numbers:', evens);
+
+// ==========================================
+// 🎯 Practice Exercises
+// ==========================================
+console.log('\n=== Practice Exercises ===');
