@@ -112,3 +112,13 @@ function power(x, y) {
   return x * power(x, y - 1);
 }
 console.log('2^5:', power(2, 5)); // 32
+
+/**
+ * 2. Flatten Nested Arrays
+ */
+function flattenArray(arr) {
+  return arr.reduce((flat, item) => {
+    return flat.concat(Array.isArray(item) ? flattenArray(item) : item);
+  }, []);
+}
+console.log('Flattened:', flattenArray([1,[2,[3,4],5]])); // [1,2,3,4,5]
