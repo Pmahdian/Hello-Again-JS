@@ -78,3 +78,14 @@ class TreeNode {
   }
 }
 
+/**
+ * In-order Traversal (Left-Root-Right)
+ */
+function inOrderTraversal(node) {
+  if (!node) return;
+  
+  inOrderTraversal(node.left);
+  console.log(node.value);
+  inOrderTraversal(node.right);
+}
+
