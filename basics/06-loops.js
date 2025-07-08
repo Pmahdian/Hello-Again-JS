@@ -99,3 +99,12 @@ for (const key in person) {
 // 6. Loop Control (break & continue)
 // ==========================================
 console.log('\n=== Part 6: Loop Control ===');
+
+// break example
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) {
+    console.log('Breaking at 5');
+    break;
+  }
+  console.log(i);
+}
