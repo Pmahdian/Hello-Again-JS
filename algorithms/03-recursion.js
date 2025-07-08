@@ -43,3 +43,8 @@ function fibonacci(n, memo = {}) {
   return memo[n];
 }
 console.log('Fibonacci(10):', fibonacci(10)); // 55
+
+// ==========================================
+// 3. Divide and Conquer
+// ==========================================
+console.log('\n=== Divide & Conquer ===');
