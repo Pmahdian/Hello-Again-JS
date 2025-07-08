@@ -64,3 +64,17 @@ function recursiveBinarySearch(arr, target, left = 0, right = arr.length - 1) {
     : recursiveBinarySearch(arr, target, mid + 1, right);
 }
 console.log('Binary Search:', recursiveBinarySearch([1,3,5,7,9], 5)); // 2
+
+// ==========================================
+// 4. Tree Traversal
+// ==========================================
+console.log('\n=== Tree Traversal ===');
+
+class TreeNode {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+
