@@ -73,3 +73,8 @@ for (const color of colors) {
   console.log(`Color: ${color}`);
 }
 
+// Iterate string characters
+const word = 'hello';
+for (const char of word) {
+  console.log(`Character: ${char}`);
+}
