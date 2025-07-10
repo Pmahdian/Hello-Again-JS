@@ -214,6 +214,19 @@ function createCounter(initialValue = 0) {
     }
   };
 }
+// Test Cases
+const counter = createCounter(5);
+console.log('Initial value:', counter.value); // 5
+
+console.log('After increment:', counter.increment()); // 6
+console.log('After increment(3):', counter.increment(3)); // 9
+
+console.log('After decrement:', counter.decrement()); // 8
+console.log('After decrement(2):', counter.decrement(2)); // 6
+
+console.log('After reset:', counter.reset()); // 5
+console.log('Current value:', counter.value); // 5
+
 // ==========================================
 // 🎯 Practice Exercises
 // ==========================================
