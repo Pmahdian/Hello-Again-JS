@@ -10,6 +10,7 @@
  * 4. Search methods (find, some, every)
  * 5. Other useful methods (slice, splice, concat)
  * 6. Sorting and reversing (sort, reverse, localeCompare)
+ * 7. Array chunking (NEW)
  */
 
 // ==========================================
@@ -153,6 +154,53 @@ console.log('Descending order:',
   [...mixedNumbers].sort((a, b) => a - b).reverse()
 );
 
+// ==========================================
+// 7. Array Chunking
+// ==========================================
+console.log('\n=== Array Chunking ===');
+
+/**
+ * Splits array into chunks of specified size
+ * @param {Array} array Input array
+ * @param {number} size Chunk size
+ * @returns {Array[]} Array of chunks
+ */
+function chunkArray(array, size) {
+  const chunks = [];
+  for (let i = 0; i < array.length; i += size) {
+    chunks.push(array.slice(i, i + size));
+  }
+  return chunks;
+}
+
+// Alternative implementation using Array.from()
+function chunkArrayAlt(array, size) {
+  return Array.from(
+    { length: Math.ceil(array.length / size) },
+    (_, index) => array.slice(index * size, index * size + size)
+  );
+}
+
+// Test Cases
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log('Original array:', numbers);
+
+console.log('Chunk size 2:', chunkArray(numbers, 2));
+// [[1, 2], [3, 4], [5, 6], [7, 8]]
+
+console.log('Chunk size 3:', chunkArray(numbers, 3));
+// [[1, 2, 3], [4, 5, 6], [7, 8]]
+
+console.log('Chunk size 1:', chunkArray(numbers, 1));
+// [[1], [2], [3], [4], [5], [6], [7], [8]]
+
+// Edge Cases
+console.log('Empty array:', chunkArray([], 2));
+// []
+console.log('Size larger than array:', chunkArray([1, 2], 5));
+// [[1, 2]]
+
+
 
 // ==========================================
 // 🎯 Practice Exercises
@@ -185,6 +233,22 @@ function findCommonElements(arr1, arr2) {
 }
 console.log('Common elements:', findCommonElements([1, 2, 3], [2, 3, 4]));
 
+/**
+ * 4. Implement chunking with remainder handling
+ *    (e.g., [1,2,3,4,5] with size 2 → [[1,2], [3,4], [5]])
+ */
+function chunkWithRemainder(array, size) {
+  // Implementation here
+}
+
+/**
+ * 5. Create overlapping chunks
+ *    (e.g., [1,2,3,4] with size 2 → [[1,2], [2,3], [3,4]])
+ */
+function overlappingChunks(array, size) {
+  // Implementation here
+}
+
 
 // ==========================================
 // 🧠 Learning Summary
@@ -195,4 +259,5 @@ Key Array Concepts:
 - Zero-based indexing
 - Methods can be destructive (modify original) or non-destructive
 - Callback functions are used extensively with array methods
+
 */
