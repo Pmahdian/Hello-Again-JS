@@ -306,7 +306,6 @@ const limitedCounter = createBoundedCounter(3, 5, 0);
 console.log('Limited increment:', limitedCounter.increment(10)); // 5 (max)
 console.log('Limited decrement:', limitedCounter.decrement(10)); // 0 (min)
 
-
 // ==========================================
 // 🧠 Learning Summary
 // ==========================================
