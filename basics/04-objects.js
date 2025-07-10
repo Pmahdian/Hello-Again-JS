@@ -283,6 +283,30 @@ const myAccount = new BankAccount('Alice', 100);
 myAccount.deposit(50);
 console.log('Account balance:', myAccount.balance);
 
+/**
+ * 4. Create a counter with max/min limits
+ */
+function createBoundedCounter(initial, max, min) {
+  return {
+    ...createCounter(initial),
+    max,
+    min,
+    increment(amount = 1) {
+      this.count = Math.min(this.count + amount, this.max);
+      return this.count;
+    },
+    decrement(amount = 1) {
+      this.count = Math.max(this.count - amount, this.min);
+      return this.count;
+    }
+  };
+}
+
+const limitedCounter = createBoundedCounter(3, 5, 0);
+console.log('Limited increment:', limitedCounter.increment(10)); // 5 (max)
+console.log('Limited decrement:', limitedCounter.decrement(10)); // 0 (min)
+
+
 
 // ==========================================
 // 🧠 Learning Summary
