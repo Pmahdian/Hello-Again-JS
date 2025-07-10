@@ -110,6 +110,47 @@ const moreFruits = ['Fig', 'Raspberry'];
 const allFruits = fruits.concat(moreFruits);
 console.log('Combined fruits:', allFruits);
 
+// ==========================================
+// 6. Sorting and Reversing Arrays
+// ==========================================
+console.log('\n=== Part 6: Sorting and Reversing ===');
+
+// String sorting examples
+const languages = ['JavaScript', 'Python', 'Ruby', 'Java'];
+console.log('Original:', languages);
+
+// Default sort (lexicographic)
+const defaultSort = [...languages].sort();
+console.log('Default sort:', defaultSort);
+
+// Case-insensitive sort
+const caseInsensitive = [...languages].sort((a, b) => 
+  a.toLowerCase().localeCompare(b.toLowerCase())
+);
+console.log('Case-insensitive:', caseInsensitive);
+
+// Persian-aware sorting
+const persianWords = ['ایران', 'باران', 'آب', 'پایتخت'];
+console.log('Original Persian:', persianWords);
+console.log('Sorted Persian:', [...persianWords].sort((a, b) => 
+  a.localeCompare(b, 'fa')
+));
+
+// Number sorting
+const mixedNumbers = [3, 1, 4, 2];
+console.log('Original numbers:', mixedNumbers);
+console.log('Sorted numbers:', [...mixedNumbers].sort((a, b) => a - b));
+
+// Reversing arrays
+const letters = ['a', 'b', 'c', 'd'];
+console.log('Original letters:', letters);
+console.log('Reversed letters:', [...letters].reverse());
+
+// Sort + Reverse combo
+console.log('Descending order:', 
+  [...mixedNumbers].sort((a, b) => a - b).reverse()
+);
+
 
 // ==========================================
 // 🎯 Practice Exercises
