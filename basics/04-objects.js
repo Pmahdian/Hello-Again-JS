@@ -182,6 +182,38 @@ console.log(book1.getInfo());
 // ==========================================
 console.log('\n=== Counter Object ===');
 
+/**
+ * Creates a counter object with basic operations
+ * @param {number} initialValue Starting count value
+ */
+function createCounter(initialValue = 0) {
+  return {
+    count: initialValue,
+    
+    // Increment counter by 1 or specified amount
+    increment(amount = 1) {
+      this.count += amount;
+      return this.count;
+    },
+    
+    // Decrement counter by 1 or specified amount
+    decrement(amount = 1) {
+      this.count -= amount;
+      return this.count;
+    },
+    
+    // Reset counter to initial value
+    reset() {
+      this.count = initialValue;
+      return this.count;
+    },
+    
+    // Get current count value
+    get value() {
+      return this.count;
+    }
+  };
+}
 // ==========================================
 // 🎯 Practice Exercises
 // ==========================================
