@@ -10,6 +10,7 @@
  * 4. Object Destructuring
  * 5. Object Spread Operator
  * 6. Prototypes and Classes
+ * * 7. Counter Object Implementation (NEW)
  */
 
 
