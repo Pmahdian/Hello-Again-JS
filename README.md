@@ -1,7 +1,7 @@
 # Hello-Again-JS ✨
 
 ![JavaScript Logo](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![GitHub Stars](https://img.shields.io/github/stars/yourusername/Hello-Again-JS?style=social)
+![GitHub Stars](https://img.shields.io/github/stars/Pmahdian/Hello-Again-JS?style=social)
 
 
 **Rediscover JavaScript with joy!** This repository is your playground for mastering modern JavaScript through:
