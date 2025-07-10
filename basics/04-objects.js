@@ -176,6 +176,12 @@ class Book {
 const book1 = new Book('1984', 'George Orwell');
 console.log(book1.getInfo());
 
+
+// ==========================================
+// 7. Counter Object Implementation
+// ==========================================
+console.log('\n=== Counter Object ===');
+
 // ==========================================
 // 🎯 Practice Exercises
 // ==========================================
