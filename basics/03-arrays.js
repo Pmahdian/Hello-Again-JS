@@ -8,9 +8,9 @@
  * 2. Basic array methods (push, pop, shift, unshift)
  * 3. Transformation methods (map, filter, reduce)
  * 4. Search methods (find, some, every)
- * 5. Other useful methods (slice, splice, concat, etc.)
+ * 5. Other useful methods (slice, splice, concat)
+ * 6. Sorting and reversing (sort, reverse, localeCompare)
  */
-
 
 // ==========================================
 // 1. Array Creation and Access
