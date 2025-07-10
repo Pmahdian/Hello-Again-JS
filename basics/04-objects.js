@@ -307,16 +307,15 @@ console.log('Limited increment:', limitedCounter.increment(10)); // 5 (max)
 console.log('Limited decrement:', limitedCounter.decrement(10)); // 0 (min)
 
 
-
 // ==========================================
 // 🧠 Learning Summary
 // ==========================================
 /*
 Key Object Concepts:
-- Objects store key-value pairs
-- Methods are functions stored as properties
-- 'this' refers to the object context
-- Modern syntax includes destructuring and spread
-- Classes provide OOP structure
+- Encapsulation of state and behavior
+- Method definitions using shorthand syntax
+- 'this' context binding
+- Factory function pattern
+- Getter methods for computed properties
 */
 
