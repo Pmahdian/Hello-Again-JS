@@ -125,3 +125,7 @@ const counter = {
 - [ ] TypeScript version
 - [ ] React integration examples
 - [ ] Database connectivity samples
+
+
+## 📜 License  
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.  
