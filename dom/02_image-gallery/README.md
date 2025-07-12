@@ -4,6 +4,13 @@ A responsive image gallery with lightbox functionality built with vanilla JavaSc
 
 ![Image Gallery Screenshot](Screenshot.png)
 
+## 🎨 About the Content  
+The images displayed in this gallery are samples of my personal artistic and photography works.
+ 
+
+
+
+
 
 ## ✨ Features
 
