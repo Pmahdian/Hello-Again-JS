@@ -2,7 +2,7 @@
 
 A responsive image gallery with lightbox functionality built with vanilla JavaScript.
 
-![Image Gallery Screenshot](./screenshot.jpg) <!-- Replace with your actual screenshot file -->
+![Image Gallery Screenshot](Screenshot.png)
 
 ## ✨ Features
 
