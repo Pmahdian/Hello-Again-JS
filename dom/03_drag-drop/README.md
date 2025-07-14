@@ -20,3 +20,11 @@ A vanilla JavaScript implementation of native HTML5 Drag and Drop API with visua
 - CSS Flexbox for layout
 - Semantic HTML
 
+## 🚀 Quick Start
+
+1. Clone the repository
+2. Navigate to the folder:
+   ```bash
+   cd dom/03_drag-drop/
+   ```
+3. Open `index.html` in your browser
