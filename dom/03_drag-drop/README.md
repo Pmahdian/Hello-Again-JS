@@ -39,3 +39,39 @@ A vanilla JavaScript implementation of native HTML5 Drag and Drop API with visua
 ├── app.js             # Drag & drop logic
 └── screenshot.png     # Demo screenshot
 ```
+# 💡 How It Works
+
+
+### JavaScript Implementation
+```javascript
+// Set up drag events
+draggable.addEventListener('dragstart', (e) => {
+  e.dataTransfer.setData('text/plain', e.target.id);
+  e.target.classList.add('dragging');
+});
+
+// Set up drop zone events
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropZone.classList.add('highlight');
+});
+```
+
+### Key Functions
+- `dragstart`: Initiates dragging
+- `dragover`: Handles drag over drop zone
+- `drop`: Handles final drop action
+- `dragend`: Cleans up after drag
+
+## 🌟 Future Improvements
+
+- [ ] Touch support for mobile devices
+- [ ] Multiple draggable items
+- [ ] File upload capability
+- [ ] Drag sorting functionality
+
+## 🤝 Contributing
+
+Pull requests welcome! For major changes, please open an issue first.
+
+---
