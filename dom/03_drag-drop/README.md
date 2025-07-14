@@ -28,3 +28,15 @@ A vanilla JavaScript implementation of native HTML5 Drag and Drop API with visua
    cd dom/03_drag-drop/
    ```
 3. Open `index.html` in your browser
+
+
+
+## 📂 File Structure
+
+```
+03_drag-drop/
+├── index.html         # HTML structure
+├── style.css          # Styling and visual feedback
+├── app.js             # Drag & drop logic
+└── screenshot.png     # Demo screenshot
+```
