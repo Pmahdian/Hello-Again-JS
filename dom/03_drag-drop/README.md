@@ -2,7 +2,6 @@
 
 A vanilla JavaScript implementation of native HTML5 Drag and Drop API with visual feedback.
 
-![Drag & Drop Demo Screenshot](./screenshot.png) <!-- Replace with your screenshot -->
 
 ## ✨ Features
 
