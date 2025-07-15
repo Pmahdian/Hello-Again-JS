@@ -49,3 +49,36 @@
     font-size: 40px;
     cursor: pointer;
 }
+
+
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Disable scroll when lightbox is open */
+body.no-scroll {
+    overflow: hidden;
+}
