@@ -1,5 +1,5 @@
-
 document.addEventListener('DOMContentLoaded', () => {
+    // Lightbox functionality
     const images = document.querySelectorAll('.gallery img');
     const lightbox = document.querySelector('.lightbox');
     const lightboxImg = lightbox.querySelector('.lightbox-img');
@@ -7,21 +7,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = lightbox.querySelector('.close');
     let currentIndex = 0;
 
-    // Open lightbox with navigation
-    images.forEach((img, index) => {
-        img.addEventListener('click', () => {
-            currentIndex = index;
-            updateLightbox();
-            lightbox.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+    // Initialize image animations
+    function initImageAnimations() {
+        images.forEach((img, index) => {
+            // Set staggered animation delay
+            img.style.transitionDelay = `${index * 10}ms`;
+            
+            // Trigger animation
+            setTimeout(() => {
+                img.classList.add('visible');
+            }, 100);
+            
+            // Set click event for lightbox
+            img.addEventListener('click', () => {
+                currentIndex = index;
+                updateLightbox();
+                openLightbox();
+            });
         });
-    });
+    }
 
+    // Lightbox functions
     function updateLightbox() {
         const img = images[currentIndex];
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
-        caption.textContent = img.dataset.title;
+        caption.textContent = img.dataset.title || '';
+    }
+
+    function openLightbox() {
+        lightbox.style.display = 'block';
+        document.body.classList.add('no-scroll');
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+        document.body.classList.remove('no-scroll');
     }
 
     // Navigation functions
@@ -35,22 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
         updateLightbox();
     }
 
-    // Close lightbox
+    // Event listeners
     closeBtn.addEventListener('click', closeLightbox);
-
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-
-    // Close when clicking outside image
+    
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
             closeLightbox();
         }
     });
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (lightbox.style.display === 'block') {
             switch(e.key) {
@@ -67,14 +81,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Add navigation buttons
+    // Initialize navigation buttons
     const navHTML = `
-        <button class="nav-btn prev">&lt;</button>
-        <button class="nav-btn next">&gt;</button>
+        <button class="nav-btn prev" aria-label="Previous image">&lt;</button>
+        <button class="nav-btn next" aria-label="Next image">&gt;</button>
     `;
     lightbox.insertAdjacentHTML('beforeend', navHTML);
 
-    // Add event listeners for navigation buttons
     lightbox.querySelector('.prev').addEventListener('click', prevImage);
     lightbox.querySelector('.next').addEventListener('click', nextImage);
+
+    // Start animations
+    initImageAnimations();
 });

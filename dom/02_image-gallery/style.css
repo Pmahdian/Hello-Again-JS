@@ -15,6 +15,18 @@
     transition: transform 0.3s, box-shadow 0.3s;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+    transform: translateY(20px);
+    transition: 
+        opacity 0.4s ease-out,
+        transform 0.4s ease-out,
+        box-shadow 0.3s ease;
+
+}
+
+.gallery img.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .gallery img:hover {
