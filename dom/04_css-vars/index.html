@@ -3,25 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Variables Controller</title>
+  <title>Advanced CSS Playground</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="controls">
-    <h1>CSS Variables Playground</h1>
-    
-    <label for="spacing">Spacing:</label>
-    <input type="range" id="spacing" name="spacing" min="0" max="50" value="10" data-unit="px">
+  <div class="container">
+    <div class="controls">
+      <h1>CSS Playground <span id="version">PRO</span></h1>
+      
+      <div class="control-group">
+        <h3>📐 Layout</h3>
+        <label>Spacing: <input type="range" id="spacing" min="0" max="50" value="10" data-unit="px"></label>
+        <label>Border Radius: <input type="range" id="radius" min="0" max="50" value="0" data-unit="px"></label>
+      </div>
 
-    <label for="blur">Blur:</label>
-    <input type="range" id="blur" name="blur" min="0" max="25" value="5" data-unit="px">
+      <div class="control-group">
+        <h3>🎨 Color</h3>
+        <label>Base Color: <input type="color" id="base-color" value="#ffc600"></label>
+        <label>Text Color: <input type="color" id="text-color" value="#ffffff"></label>
+      </div>
 
-    <label for="color">Base Color:</label>
-    <input type="color" id="color" name="color" value="#ffc600">
-  </div>
+      <div class="presets">
+        <button data-preset="dark">Dark Mode</button>
+        <button data-preset="neon">Neon Mode</button>
+      </div>
+    </div>
 
-  <div class="preview">
-    <div class="box"></div>
+    <div class="preview">
+      <div class="box">
+        <p>Live Preview</p>
+      </div>
+      
+      <div class="output">
+        <h3>Generated CSS:</h3>
+        <pre id="css-output"></pre>
+        <button id="copy-btn">Copy CSS</button>
+      </div>
+    </div>
   </div>
 
   <script src="app.js"></script>
