@@ -1,45 +1,32 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Variables Playground</title>
-  <link rel="stylesheet" href="style.css">
+  <title>CSS Variables Controller</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <div class="controls">
-      <h1>CSS Playground <span id="version">PRO</span></h1>
+      <h1>CSS Variables Controller</h1>
       
       <div class="control-group">
-        <h3>📐 Layout</h3>
+        <h2>Layout Controls</h2>
         <label>Spacing: <input type="range" id="spacing" min="0" max="50" value="10" data-unit="px"></label>
         <label>Border Radius: <input type="range" id="radius" min="0" max="50" value="0" data-unit="px"></label>
       </div>
 
       <div class="control-group">
-        <h3>🎨 Color</h3>
+        <h2>Color Controls</h2>
         <label>Base Color: <input type="color" id="base-color" value="#ffc600"></label>
         <label>Text Color: <input type="color" id="text-color" value="#ffffff"></label>
       </div>
-
-      <div class="presets">
-        <button data-preset="dark" class="preset-btn">
-          <span>🌙</span> Dark Mode
-        </button>
-        <button data-preset="neon" class="preset-btn neon-btn">
-          <span>💡</span> Neon Mode
-        </button>
-        <button data-preset="reset" class="preset-btn reset-btn">
-          <span>🔄</span> Reset
-        </button>
-      </div>
     </div>
 
-    <div class="preview">
-      <div class="box">
-        <p>Live Preview</p>
-      </div>
+    <div class="preview-area">
+      <h3>Live Preview</h3>
+      <div class="preview-box"></div>
       
       <div class="output">
         <h3>Generated CSS:</h3>
