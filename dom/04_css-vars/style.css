@@ -1,0 +1,34 @@
+:root {
+  --spacing: 10px;
+  --blur: 5px;
+  --color: #ffc600;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #193549;
+  color: white;
+}
+
+.controls {
+  margin-bottom: 50px;
+}
+
+input {
+  width: 100px;
+  margin: 10px;
+}
+
+.preview {
+  padding: var(--spacing);
+  background: var(--color);
+  filter: blur(var(--blur));
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: white;
+}
