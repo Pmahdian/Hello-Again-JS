@@ -1,10 +1,31 @@
 // DOM Elements
 const inputs = document.querySelectorAll('input[type="range"], input[type="color"]');
-const presets = document.querySelectorAll('[data-preset]');
 const cssOutput = document.getElementById('css-output');
 const copyBtn = document.getElementById('copy-btn');
 
-// Update CSS Variables and Display Code
+// Preset configurations
+const presets = {
+  dark: {
+    '--base-color': '#1a1a1a',
+    '--text-color': '#f0f0f0',
+    '--spacing': '15px',
+    '--radius': '8px'
+  },
+  neon: {
+    '--base-color': '#0ff0fc',
+    '--text-color': '#ff00ff',
+    '--spacing': '20px',
+    '--radius': '0px'
+  },
+  reset: {
+    '--base-color': '#ffc600',
+    '--text-color': '#ffffff',
+    '--spacing': '10px',
+    '--radius': '0px'
+  }
+};
+
+// Update CSS variables and output
 function updateCSS() {
   let cssCode = ':root {\n';
   
@@ -18,21 +39,35 @@ function updateCSS() {
   cssOutput.textContent = cssCode;
 }
 
-// Apply Presets
-presets.forEach(preset => {
-  preset.addEventListener('click', () => {
-    if (preset.dataset.preset === 'dark') {
-      document.documentElement.style.setProperty('--base-color', '#1a1a1a');
-      document.documentElement.style.setProperty('--text-color', '#f0f0f0');
-    } else if (preset.dataset.preset === 'neon') {
-      document.documentElement.style.setProperty('--base-color', '#0ff0fc');
-      document.documentElement.style.setProperty('--text-color', '#ff00ff');
-    }
+// Apply presets
+document.querySelectorAll('.preset-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const preset = presets[btn.dataset.preset];
+    
+    Object.entries(preset).forEach(([varName, value]) => {
+      document.documentElement.style.setProperty(varName, value);
+    });
+    
+    updateInputsFromCSS();
     updateCSS();
   });
 });
 
-// Copy CSS Code
+// Sync input values with CSS variables
+function updateInputsFromCSS() {
+  inputs.forEach(input => {
+    const cssValue = getComputedStyle(document.documentElement)
+      .getPropertyValue(`--${input.id}`).trim();
+    
+    if (input.type === 'color') {
+      input.value = cssValue;
+    } else {
+      input.value = parseInt(cssValue);
+    }
+  });
+}
+
+// Copy CSS code to clipboard
 copyBtn.addEventListener('click', () => {
   navigator.clipboard.writeText(cssOutput.textContent);
   copyBtn.textContent = 'Copied!';
