@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables Controller</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="controls">
+    <h1>CSS Variables Playground</h1>
+    
+    <label for="spacing">Spacing:</label>
+    <input type="range" id="spacing" name="spacing" min="0" max="50" value="10" data-unit="px">
+
+    <label for="blur">Blur:</label>
+    <input type="range" id="blur" name="blur" min="0" max="25" value="5" data-unit="px">
+
+    <label for="color">Base Color:</label>
+    <input type="color" id="color" name="color" value="#ffc600">
+  </div>
+
+  <div class="preview">
+    <div class="box"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
