@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced CSS Playground</title>
-  <link rel="stylesheet" href="style.css">
+  <title>CSS Variables Playground</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
@@ -24,8 +24,15 @@
       </div>
 
       <div class="presets">
-        <button data-preset="dark">Dark Mode</button>
-        <button data-preset="neon">Neon Mode</button>
+        <button data-preset="dark" class="preset-btn">
+          <span>🌙</span> Dark Mode
+        </button>
+        <button data-preset="neon" class="preset-btn neon-btn">
+          <span>💡</span> Neon Mode
+        </button>
+        <button data-preset="reset" class="preset-btn reset-btn">
+          <span>🔄</span> Reset
+        </button>
       </div>
     </div>
 
