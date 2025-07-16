@@ -8,122 +8,102 @@
 /* Base Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #2d2d2d;
-  color: white;
+  background: #f5f5f5;
+  color: #333;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
   margin: 0;
+  padding: 20px;
 }
 
 .container {
   display: flex;
-  gap: 2rem;
-  max-width: 1200px;
-  padding: 20px;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* Controls Panel */
 .controls {
-  background: rgba(0,0,0,0.3);
-  padding: 2rem;
+  background: white;
+  padding: 25px;
   border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   width: 300px;
 }
 
 .control-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 25px;
 }
 
-.control-group h3 {
+.control-group h2 {
+  color: #444;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
   margin-top: 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
-/* Preview Box */
-.preview {
+label {
+  display: block;
+  margin: 12px 0;
+  font-weight: 500;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Preview Area */
+.preview-area {
   flex-grow: 1;
-  padding: var(--spacing);
+}
+
+.preview-area h3 {
+  color: #555;
+  margin-top: 0;
+}
+
+.preview-box {
+  height: 200px;
   background: var(--base-color);
   border-radius: var(--radius);
+  padding: var(--spacing);
   color: var(--text-color);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.box {
-  text-align: center;
-}
-
-/* Preset Buttons */
-.presets {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.preset-btn {
-  border: none;
-  padding: 8px 15px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #444;
-  color: white;
-}
-
-.neon-btn {
-  background: #0ff0fc;
-  color: #ff00ff;
-  text-shadow: 0 0 5px #ff00ff;
-}
-
-.reset-btn {
-  background: #ff4757;
-}
-
-.preset-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* CSS Output */
+/* Output Section */
 .output {
-  margin-top: 20px;
-  background: rgba(0,0,0,0.2);
-  padding: 15px;
+  margin-top: 25px;
+  background: white;
+  padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 #css-output {
-  background: #1e1e1e;
-  padding: 1rem;
+  background: #f8f8f8;
+  padding: 15px;
   border-radius: 4px;
   overflow-x: auto;
+  font-family: 'Courier New', monospace;
 }
 
 #copy-btn {
-  margin-top: 10px;
-  padding: 8px 15px;
+  margin-top: 15px;
+  padding: 8px 16px;
   background: #4CAF50;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 14px;
 }
 
-#version {
-  background: gold;
-  color: black;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.8em;
+#copy-btn:hover {
+  background: #45a049;
 }
