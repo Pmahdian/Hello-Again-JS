@@ -13,6 +13,15 @@
 ✅ Handling `input` events  
 ✅ Using `dataset` for custom HTML attributes  
 
+```mermaid
+pie
+    title What You'll Learn
+    "CSS Variables" : 35
+    "DOM Manipulation" : 30
+    "Event Handling" : 25
+    "UI Design" : 10
+```
+
 ## 🛠 How to Use  
 1. Clone the repo  
 2. Open `index.html` in browser  
