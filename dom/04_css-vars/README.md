@@ -1,7 +1,7 @@
 # 🎨 CSS Variables Playground  
 **Interactive Live Editor for CSS Custom Properties**  
 
-![App Screenshot](Screenshot 2025-07-17 at 3.54.07 AM.png)
+![App Screenshot](Screenshot.png)
 
 ## 🚀 Features  
 - Live-updating CSS variables  
