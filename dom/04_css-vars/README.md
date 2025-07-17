@@ -1,7 +1,7 @@
+# 🎨 CSS Variables Playground  
+**Interactive Live Editor for CSS Custom Properties**  
 
-# 🎨 CSS Variables Controller  
-
-A dynamic playground to control CSS variables in real-time using JavaScript.  
+![App Screenshot](Screenshot 2025-07-17 at 3.54.07 AM.png)
 
 ## 🚀 Features  
 - Live-updating CSS variables  
@@ -25,7 +25,7 @@ A dynamic playground to control CSS variables in real-time using JavaScript.
 
 ## 💻 Code Structure  
 ```plaintext
-css-vars/
+04_css-vars/
 ├── index.html      # Basic UI with inputs  
 ├── styles.css      # CSS with custom properties  
 └── app.js          # JS logic (just 10 lines!)
