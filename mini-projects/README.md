@@ -1,8 +1,6 @@
 # 🚀 **Mini Projects Hub**  
 **A collection of bite-sized JavaScript projects for hands-on learning**  
 
-![Mini Projects Showcase](https://via.placeholder.com/800x400.png?text=Mini+Projects+Demo)  
-*(Replace with actual screenshot collage of your projects)*  
 
 ---
 
@@ -120,12 +118,6 @@ export default [
 3. Commit your changes (`git commit -m 'Add awesome feature'`)  
 4. Push to the branch (`git push origin feature/amazing-feature`)  
 5. Open a Pull Request  
-
----
-
-## 📜 **License**  
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ---
 
