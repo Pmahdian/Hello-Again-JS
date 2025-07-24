@@ -1,0 +1,35 @@
+/* طراحی مدرن و ریسپانسیو */
+.calculator {
+    width: 320px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.display {
+    background: #2d2d2d;
+    color: white;
+    text-align: right;
+    padding: 20px;
+}
+
+.history {
+    min-height: 20px;
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+/* استایل دکمه‌ها */
+.btn {
+    width: 25%;
+    height: 60px;
+    border: 1px solid #ddd;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #f0f0f0;
+}
