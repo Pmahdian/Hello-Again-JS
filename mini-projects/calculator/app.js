@@ -1,53 +1,48 @@
 class Calculator {
     constructor() {
-        this.currentOperand = '0';
-        this.previousOperand = '';
-        this.operation = undefined;
-        this.history = [];
-    }
-
-    clear() {
-        this.currentOperand = '0';
-        this.operation = undefined;
-    }
-
-    appendNumber(number) {
-        if (number === '.' && this.currentOperand.includes('.')) return;
-        this.currentOperand = this.currentOperand === '0' 
-            ? number 
-            : this.currentOperand + number;
-    }
-
-    compute() {
-        let computation;
-        const prev = parseFloat(this.previousOperand);
-        const current = parseFloat(this.currentOperand);
+        this.currentInput = '0';
+        this.formula = '';
+        this.history = JSON.parse(localStorage.getItem('calcHistory')) || [];
+        this.theme = 'light';
         
-        switch (this.operation) {
-            case '+':
-                computation = prev + current;
+        this.initEventListeners();
+        this.updateDisplay();
+    }
+
+    handleButtonClick(value) {
+        switch(value) {
+            case 'C':
+                this.clear();
                 break;
-            case '-':
-                computation = prev - current;
+            case '=':
+                this.calculate();
                 break;
-            // سایر عملگرها
+            case '±':
+                this.toggleSign();
+                break;
+            default:
+                this.appendToFormula(value);
         }
-        
-        this.history.push(`${prev} ${this.operation} ${current} = ${computation}`);
-        this.currentOperand = computation.toString();
-        this.operation = undefined;
+        this.updateDisplay();
     }
 
-    updateDisplay() {
-        document.getElementById('current').innerText = this.currentOperand;
-        document.getElementById('history').innerText = this.history.join('\n');
+    calculate() {
+        try {
+            const result = math.evaluate(this.formula);
+            this.history.unshift(`${this.formula} = ${result}`);
+            localStorage.setItem('calcHistory', JSON.stringify(this.history));
+            this.currentInput = result.toString();
+            this.formula = '';
+        } catch (error) {
+            this.currentInput = 'Error';
+        }
+    }
+
+    toggleTheme() {
+        this.theme = this.theme === 'light' ? 'dark' : 'light';
+        document.body.classList.toggle('dark-mode');
     }
 }
 
-// Initialize
+// راه‌اندازی اولیه
 const calculator = new Calculator();
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', () => {
-        // هندل کردن کلیک دکمه‌ها
-    });
-});
