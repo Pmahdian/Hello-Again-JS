@@ -1,48 +1,71 @@
 class Calculator {
-    constructor() {
-        this.currentInput = '0';
-        this.formula = '';
-        this.history = JSON.parse(localStorage.getItem('calcHistory')) || [];
-        this.theme = 'light';
-        
-        this.initEventListeners();
-        this.updateDisplay();
-    }
+  constructor() {
+    this.currentOperand = '0';
+    this.previousOperand = '';
+    this.operation = undefined;
+    this.history = [];
+    this.init();
+  }
 
-    handleButtonClick(value) {
-        switch(value) {
-            case 'C':
-                this.clear();
-                break;
-            case '=':
-                this.calculate();
-                break;
-            case '±':
-                this.toggleSign();
-                break;
-            default:
-                this.appendToFormula(value);
-        }
-        this.updateDisplay();
-    }
+  init() {
+    this.updateDisplay();
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const value = btn.dataset.value;
+        this.handleInput(value);
+      });
+    });
+  }
 
-    calculate() {
-        try {
-            const result = math.evaluate(this.formula);
-            this.history.unshift(`${this.formula} = ${result}`);
-            localStorage.setItem('calcHistory', JSON.stringify(this.history));
-            this.currentInput = result.toString();
-            this.formula = '';
-        } catch (error) {
-            this.currentInput = 'Error';
-        }
+  handleInput(value) {
+    if (!isNaN(value) {
+      this.appendNumber(value);
+    } else {
+      switch(value) {
+        case 'C': this.clear(); break;
+        case '±': this.toggleSign(); break;
+        case '%': this.percentage(); break;
+        case '=': this.calculate(); break;
+        default: this.chooseOperation(value);
+      }
     }
+    this.updateDisplay();
+  }
 
-    toggleTheme() {
-        this.theme = this.theme === 'light' ? 'dark' : 'light';
-        document.body.classList.toggle('dark-mode');
+  appendNumber(number) {
+    if (number === '.' && this.currentOperand.includes('.')) return;
+    this.currentOperand = 
+      this.currentOperand === '0' 
+        ? number 
+        : this.currentOperand + number;
+  }
+
+  calculate() {
+    let computation;
+    const prev = parseFloat(this.previousOperand);
+    const current = parseFloat(this.currentOperand);
+    
+    if (isNaN(prev) return;
+
+    switch (this.operation) {
+      case '+': computation = prev + current; break;
+      case '-': computation = prev - current; break;
+      case '*': computation = prev * current; break;
+      case '/': computation = prev / current; break;
+      default: return;
     }
+    
+    this.history.push(`${prev} ${this.operation} ${current} = ${computation}`);
+    this.currentOperand = computation.toString();
+    this.operation = undefined;
+  }
+
+  updateDisplay() {
+    document.getElementById('current').innerText = this.currentOperand;
+    document.getElementById('history').innerText = 
+      this.history.slice(-3).join(' | ');
+  }
 }
 
-// راه‌اندازی اولیه
-const calculator = new Calculator();
+// Initialize
+new Calculator();

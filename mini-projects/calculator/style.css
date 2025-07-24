@@ -1,41 +1,119 @@
 :root {
-    --bg-color: #f0f2f5;
-    --display-bg: #2d2d2d;
-    --btn-bg: #e0e0e0;
-    --operator-bg: #f5923e;
+  --primary: #2962ff;
+  --dark: #0a192f;
+  --light: #f8f9fa;
+  --error: #ff5252;
+  --success: #4caf50;
 }
 
-.dark-mode {
-    --bg-color: #1a1a1a;
-    --btn-bg: #333;
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+/* Calculator Container */
 .calculator {
-    width: 320px;
-    margin: 50px auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
+  width: 100%;
+  max-width: 360px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.calculator:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Display Section */
+.display {
+  padding: 25px;
+  background: var(--dark);
+  color: white;
+  text-align: right;
+  position: relative;
+}
+
+.history {
+  min-height: 24px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.current {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #e0e0e0;
 }
 
 .btn {
-    transition: transform 0.1s, background 0.3s;
+  border: none;
+  padding: 20px;
+  font-size: 1.2rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.btn:hover {
+  background: #f5f5f5;
 }
 
 .btn:active {
-    transform: scale(0.95);
+  background: #eee;
+  transform: scale(0.98);
+}
+
+/* Special Buttons */
+.operator {
+  background: var(--primary);
+  color: white;
+}
+
+.operator:hover {
+  background: #1e53ff;
 }
 
 .equal {
-    grid-column: span 2;
-    background: var(--operator-bg) !important;
+  background: var(--success);
+  color: white;
+  grid-column: span 2;
 }
 
-.theme-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 1.5em;
+.func {
+  background: #f5f5f5;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .btn {
+    padding: 18px 10px;
+  }
 }
