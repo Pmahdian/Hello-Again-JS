@@ -131,7 +131,7 @@ export default [
 ---
 
 ### 🖼️ **Screenshot Gallery**  
-*(Add real screenshots of your projects here)*  
+
 
 | Calculator | Weather App | Quiz Game |
 |------------|-------------|-----------|
