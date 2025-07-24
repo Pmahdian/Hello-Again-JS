@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Calculator</title>
+    <title>Scientific Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="calculator">
+        <div class="theme-toggle">🌓</div>
         <div class="display">
             <div class="history" id="history"></div>
             <div class="current" id="current">0</div>
         </div>
         <div class="buttons">
-            <button class="btn operator" data-value="C">C</button>
+            <button class="btn func" data-value="C">C</button>
+            <button class="btn func" data-value="±">±</button>
+            <button class="btn func" data-value="%">%</button>
+            <button class="btn operator" data-value="/">÷</button>
+            
+            <button class="btn" data-value="7">7</button>
+            <button class="btn" data-value="8">8</button>
+            <button class="btn" data-value="9">9</button>
+            <button class="btn operator" data-value="*">×</button>
+            
             <!-- سایر دکمه‌ها -->
+            
             <button class="btn equal" data-value="=">=</button>
         </div>
     </div>
