@@ -1,36 +1,128 @@
 const questions = [
     {
-        question: "What does 'DOM' stand for?",
+        question: "What does 'DOM' stand for in JavaScript?",
         options: [
-            "Document Object Model", 
+            "Document Object Model",
             "Digital Output Module",
-            "Data Object Management"
+            "Data Object Management",
+            "Display Orientation Method"
         ],
         answer: 0
     },
     {
-        question: "Which method adds an element to an array?",
+        question: "Which method adds new items to the end of an array?",
         options: [
-            ".push()",
-            ".pop()",
-            ".shift()"
+            "push()",
+            "pop()",
+            "shift()",
+            "unshift()"
         ],
         answer: 0
+    },
+    {
+        question: "What will typeof null return in JavaScript?",
+        options: [
+            "object",
+            "null",
+            "undefined",
+            "string"
+        ],
+        answer: 0
+    },
+    {
+        question: "Which keyword is used to declare variables in modern JavaScript?",
+        options: [
+            "let",
+            "var",
+            "const",
+            "All of the above"
+        ],
+        answer: 3
+    },
+    {
+        question: "What does the '=== ' operator check?",
+        options: [
+            "Value only",
+            "Value and type",
+            "Type only",
+            "Neither value nor type"
+        ],
+        answer: 1
+    },
+    {
+        question: "Which method converts JSON string to a JavaScript object?",
+        options: [
+            "JSON.parse()",
+            "JSON.stringify()",
+            "JSON.convert()",
+            "JSON.toObject()"
+        ],
+        answer: 0
+    },
+    {
+        question: "What is the output of: console.log(2 + '2')?",
+        options: [
+            "4",
+            "22",
+            "NaN",
+            "Error"
+        ],
+        answer: 1
+    },
+    {
+        question: "Which array method creates a new array with transformed elements?",
+        options: [
+            "forEach()",
+            "map()",
+            "filter()",
+            "reduce()"
+        ],
+        answer: 1
+    },
+    {
+        question: "What does the 'this' keyword refer to in a method?",
+        options: [
+            "The function itself",
+            "The global object",
+            "The object that owns the method",
+            "The parent object"
+        ],
+        answer: 2
+    },
+    {
+        question: "Which symbol is used for template literals?",
+        options: [
+            "Single quotes ('')",
+            "Double quotes (\"\")",
+            "Backticks (``)",
+            "Parentheses (())"
+        ],
+        answer: 2
     }
 ];
 
+// DOM Elements
 const questionElement = document.getElementById('question');
 const optionsElement = document.getElementById('options');
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const scoreElement = document.getElementById('score');
+const timeElement = document.getElementById('time');
 
+// Game State
 let currentQuestionIndex = 0;
 let score = 0;
+let timeLeft = 60;
+let timer;
+
+// Initialize
+startButton.addEventListener('click', startQuiz);
+nextButton.addEventListener('click', nextQuestion);
 
 function startQuiz() {
     startButton.classList.add('hide');
-    scoreElement.classList.remove('hide');
+    scoreElement.parentElement.classList.remove('hide');
+    resetTimer();
     showQuestion();
 }
 
@@ -42,7 +134,7 @@ function showQuestion() {
     question.options.forEach((option, index) => {
         const button = document.createElement('button');
         button.innerText = option;
-        button.classList.add('btn');
+        button.classList.add('btn', 'option');
         button.addEventListener('click', () => selectAnswer(index));
         optionsElement.appendChild(button);
     });
@@ -56,6 +148,7 @@ function resetState() {
 }
 
 function selectAnswer(selectedIndex) {
+    clearInterval(timer);
     const question = questions[currentQuestionIndex];
     const buttons = Array.from(optionsElement.children);
     
@@ -63,7 +156,7 @@ function selectAnswer(selectedIndex) {
     
     if (selectedIndex === question.answer) {
         score++;
-        scoreElement.querySelector('span').innerText = score;
+        scoreElement.innerText = score;
         buttons[selectedIndex].classList.add('correct');
     } else {
         buttons[selectedIndex].classList.add('wrong');
@@ -76,25 +169,35 @@ function selectAnswer(selectedIndex) {
 function nextQuestion() {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
+        resetTimer();
         showQuestion();
     } else {
         endQuiz();
     }
 }
 
-function endQuiz() {
-    questionElement.innerText = `Quiz completed! Your score: ${score}/${questions.length}`;
-    optionsElement.innerHTML = '';
-    nextButton.classList.add('hide');
-    startButton.innerText = 'Restart';
-    startButton.classList.remove('hide');
+function resetTimer() {
+    clearInterval(timer);
+    timeLeft = 60;
+    timeElement.innerText = timeLeft;
+    timer = setInterval(() => {
+        timeLeft--;
+        timeElement.innerText = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            selectAnswer(-1); // Auto-fail if time runs out
+        }
+    }, 1000);
 }
 
-startButton.addEventListener('click', () => {
-    currentQuestionIndex = 0;
-    score = 0;
-    scoreElement.querySelector('span').innerText = score;
-    startQuiz();
-});
-
-nextButton.addEventListener('click', nextQuestion);
+function endQuiz() {
+    clearInterval(timer);
+    questionElement.innerHTML = `
+        <h2>Quiz Completed!</h2>
+        <p>Your final score: <strong>${score}/${questions.length}</strong></p>
+    `;
+    optionsElement.innerHTML = '';
+    nextButton.classList.add('hide');
+    startButton.innerText = 'Restart Quiz';
+    startButton.classList.remove('hide');
+}
