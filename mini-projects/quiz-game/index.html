@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Quiz</title>
+    <title>JavaScript Quiz Game</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="quiz-container">
-        <h1>JS Quiz</h1>
+        <div class="header">
+            <h1>JavaScript Quiz</h1>
+            <div class="stats">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="timer">Time: <span id="time">60</span>s</div>
+            </div>
+        </div>
+        
         <div id="question-container">
             <div id="question"></div>
             <div id="options" class="btn-grid"></div>
         </div>
+        
         <div class="controls">
-            <button id="start-btn" class="btn">Start</button>
-            <button id="next-btn" class="btn hide">Next</button>
+            <button id="start-btn" class="btn">Start Quiz</button>
+            <button id="next-btn" class="btn hide">Next Question</button>
         </div>
-        <div id="score" class="score hide">Score: <span>0</span></div>
     </div>
     <script src="app.js"></script>
 </body>
