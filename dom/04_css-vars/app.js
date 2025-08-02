@@ -34,5 +34,5 @@ inputs.forEach(input => {
   input.addEventListener('input', updateCSS);
 });
 
-// First run to set initial values
+
 updateCSS();
