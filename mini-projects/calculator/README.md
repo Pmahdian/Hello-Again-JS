@@ -43,10 +43,6 @@ calculator/
 └── app.js             # Calculator logic
 ```
 
-## 💻 **Usage Examples**  
-```javascript
-// Basic calculation
-5 + 3 = 8
 
 // Advanced operations
 50 % → 0.5
