@@ -2,7 +2,9 @@ const express = require('express');
 
 
 const app = express();
-app.use(express.json());
+
+app.use(express.json());  //برای خواندن اطلاعات بادی
+
 app.get('./',(req,res)=>{
     req.send('hello express');
 });
