@@ -1,7 +1,8 @@
 const express = require('express');
 
-const app = express();
 
+const app = express();
+app.use(express.json());
 app.get('./',(req,res)=>{
     req.send('hello express');
 });
