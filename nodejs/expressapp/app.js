@@ -1,5 +1,7 @@
 const express = require('express');
 
+const {body, vakidationResult} = require('express-validator');
+
 
 const app = express();
 
