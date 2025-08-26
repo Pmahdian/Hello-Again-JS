@@ -3,6 +3,8 @@ const express = require('express');
 const {body, vakidationResult} = require('express-validator'); //برای اعتبار سنجی داده‌ها
 
 
+
+
 const app = express();
 
 app.use(express.json());  //برای خواندن اطلاعات بادی
