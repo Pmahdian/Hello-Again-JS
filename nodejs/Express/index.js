@@ -24,6 +24,10 @@ app.get('/api/courses/:id', (req,res)=>{
 })
 
 
+app.post('/api/courses', (req,res)=>{
+    res.send(req.body);
+})
+
 const port = process.env.APP_PORT || 3000
 app.listen(port,()=>{
     console.log(`listening on port ${port}`);
