@@ -110,4 +110,4 @@ console.log("Squared Numbers:", squaredNumbers); // [1, 4, 9]
 // 🧩 Solution for Exercise 1 (BMI Calculator)
 // ==========================================
 const calculateBMI = (weight, height) => (weight / (height ** 2)).toFixed(2);
-console.log("\nBMI:", calculateBMI(70, 1.75)); // 22.86
+console.log("\nBMI:", calculateBMI(70, 1.75)); // 22.86 
