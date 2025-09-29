@@ -39,7 +39,9 @@ app.post('/api/courses', (req,res)=>{
 })
 
 app.put('/api/courses/:id', (req,res)=>{
-    const course = courses.find(c=>)
+    const course = courses.find(c=> c.id === parseInt(req.params.id));
+    if(!course) return res.status(404).send('the course with given id not found');
+
 })
 
 
