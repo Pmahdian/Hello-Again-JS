@@ -38,6 +38,11 @@ app.post('/api/courses', (req,res)=>{
     res.send(course)
 })
 
+app.put('/api/courses/:id', (req,res)=>{
+    const course = courses.find(c=>)
+})
+
+
 const port = process.env.APP_PORT || 3000
 app.listen(port,()=>{
     console.log(`listening on port ${port}`);
