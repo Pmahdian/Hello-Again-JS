@@ -25,7 +25,18 @@ app.get('/api/courses/:id', (req,res)=>{
 
 
 app.post('/api/courses', (req,res)=>{
-    res.send(req.body);
+    if(!req.body.name || req.body.name.length < 3){
+        res.status(404).send('name is required')
+        return
+
+    }
+    const course = {
+        id : courses.length + 1,
+        name : req.body.name
+
+    }
+    courses.push(course);
+    res.send(course)
 })
 
 const port = process.env.APP_PORT || 3000
