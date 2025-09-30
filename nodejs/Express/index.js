@@ -9,6 +9,11 @@ require('dotenv').config();
 app.use(express.json());
 app.use(Logger);
 app.use(helmet());
+app.use(morgan("tiny"));
+
+
+
+
 app.get('/', (req,res)=>{
     res.send('hello');
 })
