@@ -1,7 +1,10 @@
 const Logger = require('./logger');
 const express = require('express');
 const helmet = require('helemt');
+const morgan = require("morgan");
+
 const app = express();
+
 require('dotenv').config();
 app.use(express.json());
 app.use(Logger);
