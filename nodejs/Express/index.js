@@ -1,8 +1,9 @@
+const Logger = require('./logger');
 const express = require('express');
 const app = express();
 require('dotenv').config();
 app.use(express.json());
- 
+app.use(Logger);
 
 app.get('/', (req,res)=>{
     res.send('hello');
