@@ -10,8 +10,27 @@ const courses = [
     res.send(course)
 }
 
+const getCourses = (req,res)=>{
+    res.send(['htm;','css','javascript']);
+}
+
+
+
+const addCourse = (req,res)=>{
+    if(!req.body.name || req.body.name.length < 3)
+        return res.status(404).send('name is required')
+        
+
+    const course = {
+        id : courses.length + 1,
+        name : req.body.name
+
+    }
+    courses.push(course);
+    res.send(course)
+}
 
 module.exports = {
-    getCourse
+    getCourse, addCourse, getCourses
 
 }

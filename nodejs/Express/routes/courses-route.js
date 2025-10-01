@@ -6,20 +6,10 @@ const coursesController = require("../controller/courses-controller");
 
 router.get('/:id', coursesController.getCourse);
 
+router.get('/', coursesController.getCourses);
 
-router.post('/', (req,res)=>{
-    if(!req.body.name || req.body.name.length < 3)
-        return res.status(404).send('name is required')
-        
 
-    const course = {
-        id : courses.length + 1,
-        name : req.body.name
-
-    }
-    courses.push(course);
-    res.send(course)
-})
+router.post('/', coursesController.addCourse);
 
 router.put('/:id', (req,res)=>{
     const course = courses.find(c=> c.id === parseInt(req.params.id));
