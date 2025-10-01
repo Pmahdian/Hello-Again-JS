@@ -9,7 +9,7 @@ router.get('/:id', coursesController.getCourse);
 router.get('/', coursesController.getCourses);
 
 
-router.post('/', coursesController.addCourse);
+router.post('/', coursesController.insertCourse);
 
 router.put('/:id', (req,res)=>{
     const course = courses.find(c=> c.id === parseInt(req.params.id));

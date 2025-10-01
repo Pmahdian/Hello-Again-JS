@@ -16,7 +16,7 @@ const getCourses = (req,res)=>{
 
 
 
-const addCourse = (req,res)=>{
+const insertCourse = (req,res)=>{
     if(!req.body.name || req.body.name.length < 3)
         return res.status(404).send('name is required')
         
@@ -31,6 +31,6 @@ const addCourse = (req,res)=>{
 }
 
 module.exports = {
-    getCourse, addCourse, getCourses
+    getCourse, insertCourse, getCourses
 
 }
