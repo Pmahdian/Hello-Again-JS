@@ -27,13 +27,9 @@ app.get('/', (req,res)=>{
 
 
 
-const courses = [
-    {id : 1, name : 'java'},
-    {id : 2, name : 'css'},
-    {id : 3, name : 'html'},
-]
 
 
+app.use('/api/courses', coursesRouter);
 
 
 const port = process.env.APP_PORT || 3000
