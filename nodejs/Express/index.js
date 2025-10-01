@@ -1,4 +1,4 @@
-const Logger = require('./logger');
+const Logger = require('./middelwares/logger');
 const express = require('express');
 const helmet = require('helemt');
 const morgan = require("morgan");
