@@ -11,7 +11,9 @@ router.get('/', coursesController.getCourses);
 
 router.post('/', coursesController.insertCourse);
 
-router.put('/:id', coursesController.updateCourse);
+router.put('/:id', coursesController.updateCourse); 
+
+router.delete('/:id', coursesController.deleteCourse);
 
 
 module.exports = router
