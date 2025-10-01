@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(Logger);
 app.use(helmet());
 
+startupDebug('hello from startupdebug')
 
 if (app.get('env') === "development") app.use(morgan("tiny"));
 
