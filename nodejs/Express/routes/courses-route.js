@@ -1,11 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const courses = [
-    {id : 1, name : 'java'},
-    {id : 2, name : 'css'},
-    {id : 3, name : 'html'},
-]
+
 
 router.get('/:id', )
 
