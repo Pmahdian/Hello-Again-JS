@@ -2,6 +2,7 @@ const Logger = require('./logger');
 const express = require('express');
 const helmet = require('helemt');
 const morgan = require("morgan");
+const coursesRouter = require('./routes/courses-route');
 
 const app = express();
 
