@@ -9,3 +9,6 @@ const courses = [
     if (!course) res.status(404).send('the couse with given id not found')
     res.send(course)
 }
+
+
+module.exports = getCourse;
