@@ -3,6 +3,7 @@ const express = require('express');
 const helmet = require('helemt');
 const morgan = require("morgan");
 const coursesRouter = require('./routes/courses-route');
+const homeRoute = require('./routes/home-route')
 
 const app = express();
 
@@ -20,16 +21,12 @@ startupDebug('hello from startupdebug')
 if (app.get('env') === "development") app.use(morgan("tiny"));
 
 
-app.get('/', (req,res)=>{
-    res.send('hello');
-})
-
-
 
 
 
 
 app.use('/api/courses', coursesRouter);
+app.use('/', homeRoute);
 
 
 const port = process.env.APP_PORT || 3000
