@@ -6,6 +6,10 @@ const morgan = require("morgan");
 const app = express();
 
 require('dotenv').config();
+
+
+const startupDebug =  require('debug')('startup')
+
 app.use(express.json());
 app.use(Logger);
 app.use(helmet());
