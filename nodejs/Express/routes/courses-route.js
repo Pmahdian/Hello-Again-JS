@@ -4,7 +4,7 @@ const coursesController = require("../controller/courses-controller");
 
 
 
-router.get('/:id', )
+router.get('/:id', coursesController.getCourse);
 
 
 router.post('/', (req,res)=>{

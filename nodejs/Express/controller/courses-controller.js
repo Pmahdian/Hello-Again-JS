@@ -11,4 +11,7 @@ const courses = [
 }
 
 
-module.exports = getCourse;
+module.exports = {
+    getCourse
+
+}
