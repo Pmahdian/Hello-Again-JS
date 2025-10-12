@@ -30,14 +30,19 @@ const insertCourse = async(title)=>{
 
 }
  
-const updateCourse = async(id,title) =>{
-    const result = await pool.query(`update courses set Title = ? where id = ?`[title,id])
-    return result
+const updateCourse = async(id,title)=>{
+    const [result] = await pool.query(`update courses set Title=? where id = ?`,[title,id])
+    return getCourse(id)
 
 
 }
 
-const data = updateCourse(5, 'Go').then((result)=>{
+const deleteCourse = async(id)=>{
+    const result = await pool.query(`delete from courses where id=?`,[id])
+    return getCourse(id)
+}
+
+ const data = deleteCourse(10).then((result)=>{
     console.log(result);
 
 })
