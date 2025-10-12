@@ -10,3 +10,10 @@ const pool = mysql.createPool({
 }).promise();
 
 
+const getCourses = async() =>{
+    const result = await pool.query('select * from node.courses');
+    console.log(result[0]);
+}
+
+
+getCourses();
