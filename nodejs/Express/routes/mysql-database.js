@@ -21,17 +21,23 @@ const getCourse = async(id) =>{
     return result[0];
 }
 
-const insertCourse = async(titel)=>{
-    const [result] = await pool.query(`insert into courses (Title) values(?)`,[titel])
+const insertCourse = async(title)=>{
+    const [result] = await pool.query(`insert into courses (Title) values(?)`,[title])
     
     // return {id : result.insertId, titel : titel}
-    
+    return getCourse(result.insertId)
+
+
+}
+ 
+const updateCourse = async(id,title) =>{
+    const result = await pool.query(`update courses set Title = ? where id = ?`[title,id])
+    return result
 
 
 }
 
-
-const data = insertCourse('python').then((result)=>{
+const data = updateCourse(5, 'Go').then((result)=>{
     console.log(result);
 
 })
