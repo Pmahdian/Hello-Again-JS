@@ -22,8 +22,10 @@ const getCourse = async(id) =>{
 }
 
 const insertCourse = async(titel)=>{
-    const result = await pool.query(`insert into courses(Title) values(?)`,[titel])
-    return result
+    const [result] = await pool.query(`insert into courses (Title) values(?)`,[titel])
+    
+    // return {id : result.insertId, titel : titel}
+    
 
 
 }
@@ -33,3 +35,4 @@ const data = insertCourse('python').then((result)=>{
     console.log(result);
 
 })
+
