@@ -16,7 +16,15 @@ const getCourses = async() =>{
 }
 
 
-const data = getCourses().then((result)=>{
+const getCourse = async(id) =>{
+    const [result] = await pool.query(`select * from node.courses where id = ?`,[id ] );
+    return result;
+}
+
+
+
+
+const data = getCourse(1).then((result)=>{
     console.log(result);
 
-});
+})
