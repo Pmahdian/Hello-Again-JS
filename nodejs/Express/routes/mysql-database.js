@@ -18,13 +18,18 @@ const getCourses = async() =>{
 
 const getCourse = async(id) =>{
     const [result] = await pool.query(`select * from node.courses where id = ?`,[id ] );
-    return result;
+    return result[0];
+}
+
+const insertCourse = async(titel)=>{
+    const result = await pool.query(`insert into courses(Title) values(?)`,[titel])
+    return result
+
+
 }
 
 
-
-
-const data = getCourse(1).then((result)=>{
+const data = insertCourse('python').then((result)=>{
     console.log(result);
 
 })
