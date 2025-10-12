@@ -1,3 +1,6 @@
+// crud api on database
+
+
 const mysql = require('mysql2');
 
 
@@ -39,7 +42,7 @@ const updateCourse = async(id,title)=>{
 
 const deleteCourse = async(id)=>{
     const result = await pool.query(`delete from courses where id=?`,[id])
-    return getCourse(id)
+    return id
 }
 
  const data = deleteCourse(10).then((result)=>{
