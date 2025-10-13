@@ -62,14 +62,21 @@ const updateCourse = (req,res)=>{
 }
 
 const deleteCourse = (req,res)=>{
-    const course = courses.find(c=> c.id === parseInt(req.params.id));
-    if(!course) return res.status(404).send('the course with given id not found');
-
-    const index = courses.indexOf(course);
-    courses.splice(index, 1);
+    // const course = courses.find(c=> c.id === parseInt(req.params.id));
+    CoursesModel.getCourse(parseInt(req.params.id)).then((result)=>{
+        if(!result) return res.status(404).send('the course with given id not found');
 
 
-    res.send(course);
+    })
+
+    // const index = courses.indexOf(course);
+    // courses.splice(index, 1);
+    CoursesModel.deleteCourse(parseInt(req.params.id).then((result)=>{
+        res.send(result);
+
+    }))
+
+
 
 
 }
