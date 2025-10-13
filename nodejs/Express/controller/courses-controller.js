@@ -1,3 +1,6 @@
+const CoursesModel = require('../models/courses_model');
+
+
 const courses = [
     {id : 1, name : 'java'},
     {id : 2, name : 'css'},
@@ -5,7 +8,7 @@ const courses = [
 ]
  
  const getCourse =(req,res)=>{
-    const course = courses.find(c=> c.id === parseInt(req.params.id))
+    // const course = courses.find(c=> c.id === parseInt(req.params.id))
     if (!course) res.status(404).send('the couse with given id not found')
     res.send(course)
 }
