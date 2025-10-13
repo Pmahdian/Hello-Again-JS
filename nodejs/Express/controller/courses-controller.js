@@ -1,11 +1,6 @@
 const CoursesModel = require('../models/courses_model');
 
 
-const courses = [
-    {id : 1, name : 'java'},
-    {id : 2, name : 'css'},
-    {id : 3, name : 'html'},
-]
  
  const getCourse =(req,res)=>{
     CoursesModel.getCourse(parseInt(req.params.id)).then((result)=>{
