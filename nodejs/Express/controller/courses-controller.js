@@ -8,9 +8,12 @@ const courses = [
 ]
  
  const getCourse =(req,res)=>{
+    CoursesModel.getCourse(parseInt(req.params.id)).then((result)=>{
+        if (!result) res.status(404).send('the couse with given id not found')
+        res.send(result)
+
+    })
     // const course = courses.find(c=> c.id === parseInt(req.params.id))
-    if (!course) res.status(404).send('the couse with given id not found')
-    res.send(course)
 }
 
 const getCourses = (req,res)=>{

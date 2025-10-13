@@ -1,9 +1,9 @@
 const Logger = require('./middelwares/logger');
 const express = require('express');
-const helmet = require('helemt');
+const helmet = require('helmet');
 const morgan = require("morgan");
 const coursesRouter = require('./routes/courses-route');
-const homeRoute = require('./routes/home-route')
+const homeRoute = require('./routes/home-route');
 
 const app = express();
 
