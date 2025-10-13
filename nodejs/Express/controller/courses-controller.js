@@ -42,13 +42,22 @@ const insertCourse = (req,res)=>{
 
 
 const updateCourse = (req,res)=>{
-    const course = courses.find(c=> c.id === parseInt(req.params.id));
-    if(!course) return res.status(404).send('the course with given id not found');
+    // const course = courses.find(c=> c.id === parseInt(req.params.id));
+    CoursesModel.getCourse(parseInt(req.params.id).then((result)=>{
+        if(!result) return res.status(404).send('the course with given id not found');
+
+    }))
 
     if (!req.body.name || req.body.name.length < 3) 
         return res.status(400).send('name is empty or less than 3 char');
-    course.name = req.body.name;
-    res.send(course);
+
+    CoursesModel.updateCourse(parseInt(req.params.id), req.body.name).then((result)=>{
+        res.send(result)
+    })
+
+
+    // course.name = req.body.name;
+    // res.send(course);
 
 }
 
