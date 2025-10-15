@@ -14,4 +14,8 @@ const config = {
 
 }
 
-const poolPromise = new sql.ConnectionPool(config);
+const poolPromise = new sql.ConnectionPool(config).connect().then(pool =>{
+    console.log('conncted to pool')
+    return pool
+    
+})
