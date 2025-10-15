@@ -2,7 +2,8 @@ const Logger = require('./middelwares/logger');
 const express = require('express');
 const helmet = require('helmet');
 const morgan = require("morgan");
-const coursesRouter = require('./routes/courses-route');
+const coursesRoute = require('./routes/courses-route');
+const userRoute = require('./routes/users-route');
 const homeRoute = require('./routes/home-route');
 
 const app = express();
@@ -25,7 +26,7 @@ if (app.get('env') === "development") app.use(morgan("tiny"));
 
 
 
-app.use('/api/courses', coursesRouter);
+app.use('/api/courses', coursesRoute);
 app.use('/', homeRoute);
 
 
