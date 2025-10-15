@@ -18,4 +18,6 @@ const poolPromise = new sql.ConnectionPool(config).connect().then(pool =>{
     console.log('conncted to pool')
     return pool
     
+}).catch(err=>{
+    console.log('Error :' + err)
 })
