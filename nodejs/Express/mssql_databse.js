@@ -13,3 +13,5 @@ const config = {
     }
 
 }
+
+const poolPromise = new sql.ConnectionPool(config);
