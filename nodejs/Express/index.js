@@ -22,10 +22,6 @@ startupDebug('hello from startupdebug')
 if (app.get('env') === "development") app.use(morgan("tiny"));
 
 
-
-
-
-
 app.use('/api/courses', coursesRoute);
 app.use('/api/users', userRoute);
 app.use('/', homeRoute);
