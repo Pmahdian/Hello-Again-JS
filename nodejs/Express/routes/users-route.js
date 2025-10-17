@@ -6,5 +6,5 @@ const userController = require('../controller/users-controller');
 //Post /api/users/login
 
 
-router.post('/register',)
-router.post('/login',)
+router.post('/register',userController.register);
+router.post('/login',userController.login);
