@@ -1,4 +1,6 @@
 userModel = require('../models/users-model');
+const Joi = require('joi');
+
 
 const register = async (req, res, next)=> {
     console.log(req.body);
