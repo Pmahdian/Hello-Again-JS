@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "express-validator": "^7.2.1"
+    "express-validator": "^7.2.1",
+    "joi": "^18.0.1"
   }
 }
