@@ -12,7 +12,9 @@ const register = async (req, res, next)=> {
     const validateResult =  Joi.object(schema).validate(req.body );
     console.log(validateResult);
     if (validateResult.error)
-        return res.send(validateResult.error.details[0].message);
+        return res.send(validateResult.error.details[0].message)
+
+        res.send('ok')
 
 };
 const login = async (req, res, next)=> {
