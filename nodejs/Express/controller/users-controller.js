@@ -2,8 +2,13 @@ userModel = require('../models/users-model');
 const Joi = require('joi');
 
 
+
 const register = async (req, res, next)=> {
-    console.log(req.body);
+    const schema= {
+        name : Joi.string().min(3).max(50).required(),
+        email : Joi.string().email().required(),
+        password : Joi.string()
+    }
     res.send('ok');
 
 };
