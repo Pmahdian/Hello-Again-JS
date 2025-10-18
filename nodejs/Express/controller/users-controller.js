@@ -2,6 +2,7 @@
 const Joi = require('joi');
 const _ = require('lodash');
 const bcrypt = require('bcrypt');
+const jwt = require("jsonwebtoken");
 const UserModel = require('../models/users-model');
 
 
@@ -50,7 +51,7 @@ const login = async (req, res, next)=> {
     const validPassword = await bcrypt.compare(req.body.password,  user.password)
     if (!validPassword) return res.status(400).send('email or password is invalid')
 
-        
+
    res.send('Login')     
 
 
