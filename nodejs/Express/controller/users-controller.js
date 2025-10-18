@@ -1,5 +1,6 @@
 
 const Joi = require('joi');
+const _ = require('lodash');
 const UserModel = require('../models/users-model');
 
 
