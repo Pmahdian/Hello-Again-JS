@@ -1,5 +1,6 @@
-userModel = require('../models/users-model');
+
 const Joi = require('joi');
+const UserModel = require('../models/users-model');
 
 
 
@@ -13,7 +14,12 @@ const register = async (req, res, next)=> {
     console.log(validateResult);
     if (validateResult.error)
         return res.send(validateResult.error.details[0].message)
+     
+    
 
+    
+    const result = await UserModel.insertUser(req.body.name,req.body.email,req.body.password)   
+    console.log(result) 
         res.send('ok')
 
 };
