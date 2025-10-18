@@ -4,7 +4,10 @@ const _ = require('lodash');
 const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
 const UserModel = require('../models/users-model');
-require('dotenv');
+const path = require('path');
+
+// مسیر صحیح به فایل .env (یک پوشه بالاتر)
+require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 
 
 
@@ -33,7 +36,7 @@ const register = async (req, res, next)=> {
 
         const newUser = await UserModel.getUserByEmail(req.body.email)
 
-        const token = jwt.sign({id : newUser.id}, "Parnian_firstTryNodeJs_key_100%_secret")
+        const token = jwt.sign({id : newUser.id}, process.env.SECRET_KEY)
 
         res.header("Authorization", token).send(_.pick(newUser,["id", "name", "email"])); //by using lodash
 
@@ -53,7 +56,7 @@ const login = async (req, res, next)=> {
 
     const validPassword = await bcrypt.compare(req.body.password,  user.password)
     if (!validPassword) return res.status(400).send('email or password is invalid')
-    const token = jwt.sign({id : user.id}, "Parnian_firstTryNodeJs_key_100%_secret")    
+    const token = jwt.sign({id : user.id}, process.env.SECRET_KEY)    
     res.send(token);     
 
 
