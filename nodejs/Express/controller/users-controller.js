@@ -47,6 +47,8 @@ const login = async (req, res, next)=> {
     const user = await UserModel.getUserByEmail(req.body.email)
     if (! user) return res.status(400).send('eamil or password is invalid')
 
+    const validPassword = await bcrypt.compare(req.body.password,  user.password)
+
 
 
 };
