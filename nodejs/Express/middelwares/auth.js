@@ -11,7 +11,8 @@ function auth(req, res, next){
 
     try{  
     const decode = jwt.verify(token, process.env.SECRET_KEY)
-    req.userData = decode
+    req.userData = decode //define a new property for a valid token
+    next()
     }
     catch(er){
         res.satatus(400).send('token is invalid')
