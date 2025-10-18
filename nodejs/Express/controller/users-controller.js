@@ -1,6 +1,7 @@
 
 const Joi = require('joi');
 const _ = require('lodash');
+const bcrypt = require('bcrypt');
 const UserModel = require('../models/users-model');
 
 
@@ -25,7 +26,7 @@ const register = async (req, res, next)=> {
 
         const newUser = await UserModel.getUserByEmail(req.body.email)
 
-            res.send(_.pick(newUser,["id", "name", "email"]));
+            res.send(_.pick(newUser,["id", "name", "email"])); //by using lodash
 
 };
 const login = async (req, res, next)=> {
