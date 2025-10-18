@@ -17,10 +17,10 @@ const register = async (req, res, next)=> {
      
     
 
-    
-    const result = await UserModel.insertUser(req.body.name,req.body.email,req.body.password)   
-    console.log(result) 
-        res.send('ok')
+
+        const result = await UserModel.insertUser(req.body.name,req.body.email,req.body.password)   
+        console.log(result) 
+            res.send('ok')
 
 };
 const login = async (req, res, next)=> {
