@@ -32,7 +32,9 @@ const register = async (req, res, next)=> {
 
         const newUser = await UserModel.getUserByEmail(req.body.email)
 
-            res.send(_.pick(newUser,["id", "name", "email"])); //by using lodash
+        const token = jwt.sign({id : user.id}, "Parnian_firstTryNodeJs_key_100%_secret")
+
+        res.header("Authorization", token).send(_.pick(newUser,["id", "name", "email"])); //by using lodash
 
 };
 const login = async (req, res, next)=> {
