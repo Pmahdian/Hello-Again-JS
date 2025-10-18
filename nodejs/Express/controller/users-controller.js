@@ -44,6 +44,8 @@ const login = async (req, res, next)=> {
     if (validateResult.error)
         return res.send(validateResult.error.details[0].message)
     
+    const user = await UserModel.getUserByEmail(req.body.email)
+    if (! user) return res.status(400).send('eamil or password is invalid')
 
 
 
