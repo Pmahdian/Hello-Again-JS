@@ -25,7 +25,7 @@ const register = async (req, res, next)=> {
 
         const newUser = await UserModel.getUserByEmail(req.body.email)
 
-            res.send(newUser)
+            res.send(_.pick(newUser,["id", "name", "email"]));
 
 };
 const login = async (req, res, next)=> {
