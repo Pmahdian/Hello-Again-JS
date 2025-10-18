@@ -45,7 +45,7 @@ const login = async (req, res, next)=> {
         return res.send(validateResult.error.details[0].message)
     
     const user = await UserModel.getUserByEmail(req.body.email)
-    if (! user) return res.status(400).send('user or password is invalid')
+    if (! user) return res.status(400).send('emial or password is invalid')
 
     const validPassword = await bcrypt.compare(req.body.password,  user.password)
 
