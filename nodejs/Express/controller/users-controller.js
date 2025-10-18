@@ -20,7 +20,12 @@ const register = async (req, res, next)=> {
         const user = await UserModel.getUserByEmail(req.body.email)
         if (user) return res.status(400 ).send("user already registered")
 
-        const result = await UserModel.insertUser(req.body.name,req.body.email,req.body.password)   
+        const hashPassword = await bcrypt.hash(req.body.password, 10)    
+
+        const result = await UserModel.insertUser(
+            req.body.name,
+            req.body.email
+            ,hashPassword)   
         console.log(result) 
 
 
