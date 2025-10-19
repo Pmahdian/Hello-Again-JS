@@ -7,6 +7,9 @@ const CoursesModel = require('../models/courses_model');
         if (!result) res.status(404).send('the couse with given id not found')
         res.send(result)
 
+    }).catch((error)=>{
+        res.status(400).send('some thing failed');
+
     })
     // const course = courses.find(c=> c.id === parseInt(req.params.id))
 }
