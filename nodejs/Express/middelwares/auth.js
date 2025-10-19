@@ -20,3 +20,5 @@ module.exports = function auth(req, res, next){
 
 
 }
+
+// You should never store tokens in the database because it allows hackers to easily access them. This is dangerous and bad for your application's security.
