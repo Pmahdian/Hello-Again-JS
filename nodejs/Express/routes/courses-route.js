@@ -7,7 +7,7 @@ const auth = require('../middelwares/auth');
 
 router.get('/:id', coursesController.getCourse);
 
-router.get('/',auth, coursesController.getCourses);
+router.get('/', coursesController.getCourses);
 
 
 router.post('/', coursesController.insertCourse);
