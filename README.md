@@ -4,6 +4,7 @@
 
 A comprehensive JavaScript practice repository with progressive exercises and real-world projects.
 
+
 ## 📂 Project Structure
 
 ```
